@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply text-gray-800 bg-white;
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* WCAG AA contrast minimum */
+  p, li, td {
+    @apply text-gray-700;
+    font-size: 1rem; /* 16px min on mobile */
+  }
+
+  h1 { @apply text-3xl sm:text-4xl font-bold text-gray-900; }
+  h2 { @apply text-2xl sm:text-3xl font-bold text-gray-900; }
+  h3 { @apply text-xl font-semibold text-gray-900; }
+}
+
+@layer components {
+  /* Tap targets ≥ 48×48px with spacing */
+  .btn-primary {
+    @apply inline-flex items-center justify-center
+           min-h-[48px] min-w-[48px] px-6 py-3
+           bg-brand-500 hover:bg-brand-600
+           text-white font-semibold rounded-xl
+           transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center
+           min-h-[48px] min-w-[48px] px-6 py-3
+           bg-accent-500 hover:bg-accent-600
+           text-white font-semibold rounded-xl
+           transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-accent-500 focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center
+           min-h-[48px] min-w-[48px] px-6 py-3
+           border-2 border-brand-500 text-brand-500
+           hover:bg-brand-50 font-semibold rounded-xl
+           transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-md p-6 border border-gray-100;
+  }
+
+  /* Ad container - viewable placement, not near nav */
+  .ad-unit {
+    @apply my-8 flex justify-center items-center
+           min-h-[90px] bg-gray-50 rounded-xl overflow-hidden;
+  }
+
+  /* 150px separation from interactive elements */
+  .ad-separator {
+    @apply mt-[150px] mb-[24px];
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Lazy load images */
+img {
+  content-visibility: auto;
+}
+
+/* Reduce CLS for images */
+img[width][height] {
+  aspect-ratio: attr(width) / attr(height);
+}

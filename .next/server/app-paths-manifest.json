@@ -1,0 +1,15 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/about/page": "app/about/page.js",
+  "/service-areas/page": "app/service-areas/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/services/refrigerator/page": "app/services/refrigerator/page.js",
+  "/privacy-policy/page": "app/privacy-policy/page.js",
+  "/services/air-conditioner/page": "app/services/air-conditioner/page.js",
+  "/services/microwave/page": "app/services/microwave/page.js",
+  "/services/television/page": "app/services/television/page.js",
+  "/services/page": "app/services/page.js",
+  "/services/washing-machine/page": "app/services/washing-machine/page.js",
+  "/page": "app/page.js"
+}

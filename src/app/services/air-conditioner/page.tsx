@@ -1,0 +1,53 @@
+import type { Metadata } from 'next';
+import ServicePageTemplate from '@/components/ServicePageTemplate';
+
+export const metadata: Metadata = {
+  title: 'AC Repair & Service in Trichy | All Brands',
+  description:
+    'Expert AC repair and service in Trichy — gas refill, deep cleaning, installation, compressor repair. All brands: Voltas, Daikin, LG, Samsung. 90-day warranty. Call 9344809038.',
+  alternates: { canonical: 'https://yourdomain.com/services/air-conditioner' },
+};
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'AC Repair & Service',
+  serviceType: 'Air Conditioner Repair',
+  provider: {
+    '@type': 'LocalBusiness',
+    name: 'Hire Expert Service Center',
+    telephone: '+919344809038',
+  },
+  areaServed: { '@type': 'City', name: 'Tiruchirappalli' },
+  description:
+    'AC gas refill, deep cleaning, installation, cooling issues, compressor service for all brands in Trichy.',
+};
+
+export default function ACPage() {
+  return (
+    <ServicePageTemplate
+      icon="❄️"
+      title="AC Repair & Service in Trichy"
+      tagline="Split, window & cassette AC — cooling issues, gas refill, deep cleaning & installation by certified technicians."
+      description="Our AC technicians are trained on all types of air conditioners — split, window, cassette, and portable units. We diagnose and fix cooling failures, refrigerant leaks, compressor faults, PCB failures, water leakage, and unusual noise issues. AC deep cleaning service extends the life of your unit and keeps energy bills low. We also handle new AC installation, uninstallation, and relocation across Trichy."
+      problems={[
+        'AC not cooling / poor cooling',
+        'Gas refill (refrigerant charging)',
+        'AC deep cleaning service',
+        'Compressor replacement',
+        'Water leaking from indoor unit',
+        'AC making loud noise',
+        'PCB / remote control issues',
+        'Fan motor repair',
+        'AC installation & uninstallation',
+        'Timer / thermostat faults',
+        'Capacitor replacement',
+        'Error code diagnosis',
+      ]}
+      brands={['Voltas', 'Daikin', 'LG', 'Samsung', 'Hitachi', 'Blue Star', 'O General', 'Godrej', 'Carrier', 'Panasonic', 'Mitsubishi', 'Lloyd']}
+      schema={schema}
+      adSlot1="4455667788"
+      adSlot2="5566778899"
+    />
+  );
+}
