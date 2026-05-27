@@ -36,7 +36,7 @@ export default function ServiceAreasPage() {
       {/* Hero */}
       <section className="hero-bg dot-grid relative overflow-hidden">
         <div className="deco-ring w-80 h-80 -top-16 -right-16" aria-hidden="true" />
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <div className="max-w-2xl animate-fade-up">
             <span className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-blue-200 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
               50+ Locations Covered
@@ -57,12 +57,12 @@ export default function ServiceAreasPage() {
       </section>
 
       {/* Ad */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 ad-separator">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 ad-separator">
         <AdUnit slot="2021222324" format="horizontal" />
       </div>
 
       {/* Areas grid */}
-      <section className="py-16 max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-10">
           <span className="badge mb-4">Service Coverage</span>
           <h2 className="text-3xl font-extrabold text-gray-900 mb-3">Areas We Cover</h2>
@@ -93,13 +93,13 @@ export default function ServiceAreasPage() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-8">
         <AdUnit slot="2425262728" format="rectangle" />
       </div>
 
       {/* Services at each area */}
       <section className="py-14 border-t border-gray-100 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <h2 className="text-2xl font-extrabold text-gray-900 text-center mb-8">Services Available in All Areas</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {[

@@ -36,7 +36,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="hero-bg dot-grid relative overflow-hidden">
         <div className="deco-ring w-80 h-80 -top-16 -right-16" aria-hidden="true" />
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <div className="max-w-xl animate-fade-up">
             <span className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-blue-200 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
               Get In Touch
@@ -57,12 +57,12 @@ export default function ContactPage() {
       </section>
 
       {/* Ad */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 ad-separator">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 ad-separator">
         <AdUnit slot="3637383940" format="horizontal" />
       </div>
 
       {/* Contact grid */}
-      <section className="py-16 max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
           {/* Lead Form */}
@@ -131,7 +131,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 my-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 my-8">
         <AdUnit slot="4041424344" format="auto" />
       </div>
     </>

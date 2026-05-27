@@ -38,7 +38,7 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="hero-bg dot-grid relative overflow-hidden">
         <div className="deco-ring w-80 h-80 -top-16 -right-16" aria-hidden="true" />
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <div className="max-w-2xl animate-fade-up">
             <span className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-blue-200 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
               Expert Repair Services
@@ -66,12 +66,12 @@ export default function ServicesPage() {
       </section>
 
       {/* Ad */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 ad-separator">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 ad-separator">
         <AdUnit slot="2233445566" format="horizontal" />
       </div>
 
       {/* Services grid */}
-      <section className="py-16 max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="space-y-6">
           {services.map((s, i) => (
             <Link key={s.href} href={s.href}
@@ -102,7 +102,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-8">
         <AdUnit slot="3344556677" format="rectangle" />
       </div>
 

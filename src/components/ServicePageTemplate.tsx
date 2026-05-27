@@ -26,7 +26,7 @@ export default function ServicePageTemplate({
       {/* ── Hero ── */}
       <section className="hero-bg dot-grid relative overflow-hidden">
         <div className="deco-ring w-96 h-96 -top-20 -right-20" aria-hidden="true" />
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-up">
               <a href="/services" className="inline-flex items-center gap-1.5 text-blue-300 hover:text-blue-200 text-sm mb-6 transition-colors">
@@ -73,12 +73,12 @@ export default function ServicePageTemplate({
       </section>
 
       {/* ── Ad ── */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 ad-separator">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 ad-separator">
         <AdUnit slot={adSlot1} format="horizontal" />
       </div>
 
       {/* ── Content ── */}
-      <section className="py-16 max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-12">
 
@@ -152,7 +152,7 @@ export default function ServicePageTemplate({
       </section>
 
       {/* ── Mid Ad ── */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 my-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 my-8">
         <AdUnit slot={adSlot2} format="auto" />
       </div>
 

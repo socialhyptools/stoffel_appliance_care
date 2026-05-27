@@ -30,7 +30,7 @@ export default function CookieConsent() {
       className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 text-white
                  px-4 py-4 shadow-2xl border-t border-gray-700"
     >
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4">
         <p className="text-sm flex-1 text-gray-300">
           We use cookies and third-party advertising (Google AdSense) to serve personalised ads and
           analyse traffic. See our{' '}

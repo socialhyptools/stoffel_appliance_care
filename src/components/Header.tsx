@@ -43,7 +43,7 @@ export default function Header() {
     <>
       {/* Top bar */}
       <div className="bg-brand-900 text-blue-200 text-xs py-2 hidden sm:block">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 bg-green-400 rounded-full"></span>
@@ -73,7 +73,7 @@ export default function Header() {
             : 'bg-white border-b border-gray-100'
           }`}
       >
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16">
 
             {/* Logo */}

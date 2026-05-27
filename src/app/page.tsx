@@ -63,7 +63,7 @@ export default function HomePage() {
         <div className="deco-ring w-[600px] h-[600px] -top-32 -right-32" aria-hidden="true" />
         <div className="deco-ring w-[400px] h-[400px] top-20 -left-48" aria-hidden="true" />
 
-        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
             {/* Left — copy */}
@@ -133,7 +133,7 @@ export default function HomePage() {
 
       {/* ══════════════ STATS ══════════════ */}
       <section className="py-14 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {stats.map((s) => (
               <div key={s.label}
@@ -149,13 +149,13 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════ AD (after content, 150px from buttons) ══════════════ */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 ad-separator">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 ad-separator">
         <AdUnit slot="1234567890" format="horizontal" />
       </div>
 
       {/* ══════════════ SERVICES ══════════════ */}
       <section className="py-20" style={{ background: 'linear-gradient(180deg,#f8faff 0%,#fff 100%)' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <span className="badge mb-4">What We Fix</span>
             <h2 className="text-4xl font-extrabold text-gray-900 mb-4">Appliance Repair Services</h2>
@@ -235,7 +235,7 @@ export default function HomePage() {
 
       {/* ══════════════ WHY US ══════════════ */}
       <section className="py-20" style={{ background: 'linear-gradient(180deg,#f8faff 0%,#fff 100%)' }}>
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="badge mb-5">Why Choose Us</span>
@@ -266,7 +266,7 @@ export default function HomePage() {
 
       {/* ══════════════ BRANDS ══════════════ */}
       <section className="py-14 bg-white border-y border-gray-100">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <p className="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-6">
             Brands We Service
           </p>
@@ -281,7 +281,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════ AD ══════════════ */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <AdUnit slot="0987654321" format="rectangle" />
       </div>
 
@@ -316,7 +316,7 @@ export default function HomePage() {
       </section>
 
       {/* ══════════════ BOTTOM AD ══════════════ */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 my-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 my-6">
         <AdUnit slot="1122334455" format="horizontal" />
       </div>
     </>

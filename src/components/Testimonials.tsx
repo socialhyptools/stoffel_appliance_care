@@ -20,7 +20,7 @@ function Stars({ count }: { count: number }) {
 export default function Testimonials() {
   return (
     <section className="py-20" style={{ background: 'linear-gradient(180deg,#f8faff 0%,#fff 100%)' }}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center mb-14">
           <span className="badge mb-4">Customer Reviews</span>
           <h2 className="text-4xl font-extrabold text-gray-900 mb-4">What Our Customers Say</h2>

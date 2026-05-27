@@ -27,7 +27,7 @@ export default function Footer() {
     <footer style={{ background: 'linear-gradient(180deg,#0c1428 0%,#070e2b 100%)' }} className="text-gray-400 mt-0">
       {/* Top strip */}
       <div className="border-b border-white/5">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
             {/* Brand col */}
@@ -114,7 +114,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-600">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-600">
         <p>© {new Date().getFullYear()} Appliance Service Experts. All rights reserved.</p>
         <div className="flex gap-4">
           <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
