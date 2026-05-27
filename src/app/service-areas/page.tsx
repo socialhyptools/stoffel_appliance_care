@@ -1,100 +1,129 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import AdUnit from '@/components/AdUnit';
 
 export const metadata: Metadata = {
-  title: 'Service Areas in Trichy | Home Appliance Repair',
-  description:
-    'Appliance Service Experts covers 50+ locations in Trichy — Thillai Nagar, KK Nagar, Srirangam, Woraiyur, Anna Nagar & more. Call 9344809038.',
+  title: 'Service Areas in Trichy | Appliance Service Experts',
+  description: 'Appliance Service Experts covers 50+ locations in Trichy — Thillai Nagar, KK Nagar, Srirangam, Woraiyur, Anna Nagar & more. Call 9344809038.',
 };
 
 const areas = [
-  'Thillai Nagar', 'KK Nagar', 'Woraiyur', 'Srirangam', 'Anna Nagar',
-  'Palakarai', 'Ariyamangalam', 'Kattur', 'Karumandabam', 'Puthur',
-  'Cantonment', 'Teppakulam', 'Tennur', 'Ponmalai', 'Golden Rock',
-  'Manapparai', 'Musiri', 'Lalgudi', 'Manachanallur', 'Thiruverambur',
-  'Sathyamangalam', 'Vayalur Road', 'Rockfort Area', 'Chathiram Bus Stand',
-  'Ponnagar', 'Kailasapuram', 'Navalpattu', 'Edamalaipattippu',
-  'Poolangudi', 'Kaveri Nagar', 'Collector Office Area', 'Pallapatti',
-  'Arulmigu Mariamman Teppakulam', 'Panjapur', 'Sendurai', 'Uppiliapuram',
-  'Andankoil', 'Keezhamadhanur', 'Thuraiyanur', 'Turaiyur',
-  'Thuvakudi', 'Koothampoondi', 'Varaganeri', 'West Boulevard Road',
-  'Rajaji Nagar', 'Gandhi Nagar', 'Krishnamurthy Nagar', 'Bharathidasan Nagar',
-  'Nehru Nagar', 'Sangam Nagar',
+  'Thillai Nagar','KK Nagar','Woraiyur','Srirangam','Anna Nagar',
+  'Palakarai','Ariyamangalam','Kattur','Karumandabam','Puthur',
+  'Cantonment','Teppakulam','Tennur','Ponmalai','Golden Rock',
+  'Manapparai','Musiri','Lalgudi','Manachanallur','Thiruverambur',
+  'Sathyamangalam','Vayalur Road','Rockfort Area','Chathiram Bus Stand',
+  'Ponnagar','Kailasapuram','Navalpattu','Edamalaipattippu',
+  'Poolangudi','Kaveri Nagar','Collector Office Area','Pallapatti',
+  'Panjapur','Sendurai','Uppiliapuram','Andankoil','Keezhamadhanur',
+  'Thuraiyanur','Turaiyur','Thuvakudi','Koothampoondi','Varaganeri',
+  'West Boulevard Road','Rajaji Nagar','Gandhi Nagar','Krishnamurthy Nagar',
+  'Bharathidasan Nagar','Nehru Nagar','Sangam Nagar',
 ];
 
 const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
+  '@context': 'https://schema.org', '@type': 'Service',
   name: 'Home Appliance Repair Service Areas',
-  provider: {
-    '@type': 'LocalBusiness',
-    name: 'Appliance Service Experts',
-    telephone: '+919344809038',
-  },
+  provider: { '@type': 'LocalBusiness', name: 'Appliance Service Experts', telephone: '+919344809038' },
   areaServed: areas.map((a) => ({ '@type': 'Place', name: `${a}, Tiruchirappalli` })),
 };
 
 export default function ServiceAreasPage() {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      <section className="bg-brand-700 text-white py-14">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h1 className="text-white text-4xl font-extrabold mb-4">Service Areas in Trichy</h1>
-          <p className="text-blue-200 text-lg max-w-xl">
-            We cover 50+ locations across Tiruchirappalli. Fast doorstep appliance repair wherever you are.
-          </p>
+      {/* Hero */}
+      <section className="hero-bg dot-grid relative overflow-hidden">
+        <div className="deco-ring w-80 h-80 -top-16 -right-16" aria-hidden="true" />
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+          <div className="max-w-2xl animate-fade-up">
+            <span className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-blue-200 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+              50+ Locations Covered
+            </span>
+            <h1 className="text-white font-extrabold mb-5" style={{ fontSize: 'clamp(2.2rem,5vw,3.5rem)' }}>
+              Serving All of<br /><span className="text-gradient-blue">Tiruchirappalli</span>
+            </h1>
+            <p className="text-blue-200 text-lg leading-relaxed">
+              Fast doorstep appliance repair wherever you are in Trichy. 30-minute response, 50+ areas covered.
+            </p>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0" aria-hidden="true">
+          <svg viewBox="0 0 1440 40" fill="none" className="w-full">
+            <path d="M0 40L1440 40L1440 10C1200 35 960 5 720 20C480 35 240 5 0 20L0 40Z" fill="white" />
+          </svg>
         </div>
       </section>
 
-      {/* Ad after hero */}
+      {/* Ad */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 ad-separator">
         <AdUnit slot="2021222324" format="horizontal" />
       </div>
 
-      <section className="py-12 max-w-6xl mx-auto px-4 sm:px-6">
-        <h2 className="mb-6">Areas We Serve</h2>
+      {/* Areas grid */}
+      <section className="py-16 max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-10">
+          <span className="badge mb-4">Service Coverage</span>
+          <h2 className="text-3xl font-extrabold text-gray-900 mb-3">Areas We Cover</h2>
+          <p className="text-gray-500">Can't find yours? Call us — we'll check availability.</p>
+        </div>
+
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
           {areas.map((area) => (
-            <div
-              key={area}
-              className="bg-brand-50 border border-brand-100 text-brand-700
-                         text-sm font-medium px-3 py-3 rounded-xl text-center
-                         hover:bg-brand-100 transition-colors"
-            >
+            <div key={area}
+              className="group bg-white border border-gray-100 rounded-xl px-3 py-3.5 text-sm font-medium text-gray-700
+                         text-center hover:border-brand-300 hover:text-brand-700 hover:bg-brand-50
+                         hover:shadow-soft transition-all duration-200 cursor-default flex items-center justify-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-400 group-hover:bg-accent-500 transition-colors flex-shrink-0" />
               {area}
             </div>
           ))}
         </div>
 
-        <div className="mt-10 card bg-accent-50 border-accent-200">
-          <h3 className="text-accent-600 mb-2">Don't see your area?</h3>
-          <p className="text-gray-700 text-sm">
-            Call us at{' '}
-            <a href="tel:+919344809038" className="text-brand-600 font-semibold hover:underline">
-              93448 09038
-            </a>{' '}
-            — we may still be able to send a technician to your location. We're constantly expanding
-            our coverage across the Trichy district.
-          </p>
+        {/* Callout */}
+        <div className="mt-10 rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-5 border border-brand-200"
+          style={{ background: 'linear-gradient(135deg,#eff6ff 0%,#dbeafe 100%)' }}>
+          <div className="text-4xl flex-shrink-0">🗺️</div>
+          <div className="flex-1 text-center sm:text-left">
+            <h3 className="font-bold text-brand-900 mb-1">Don't see your area?</h3>
+            <p className="text-brand-700 text-sm">Call us at <a href="tel:+919344809038" className="font-bold hover:underline">93448 09038</a> — we may still be able to send a technician. We're constantly expanding across the Trichy district.</p>
+          </div>
+          <a href="tel:+919344809038" className="btn-primary btn flex-shrink-0">📞 Call Us</a>
         </div>
       </section>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 my-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 mb-8">
         <AdUnit slot="2425262728" format="rectangle" />
       </div>
 
-      <section className="bg-brand-700 text-white py-12">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-white mb-4">Ready to Book?</h2>
-          <p className="text-blue-200 mb-8">Call or WhatsApp — 30-minute response guaranteed.</p>
-          <a href="tel:+919344809038" className="btn-secondary text-base">
-            📞 Call 93448 09038
-          </a>
+      {/* Services at each area */}
+      <section className="py-14 border-t border-gray-100 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <h2 className="text-2xl font-extrabold text-gray-900 text-center mb-8">Services Available in All Areas</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            {[
+              { icon: '❄️', label: 'AC Repair', href: '/services/air-conditioner' },
+              { icon: '🫧', label: 'Washing Machine', href: '/services/washing-machine' },
+              { icon: '🧊', label: 'Refrigerator', href: '/services/refrigerator' },
+              { icon: '📺', label: 'TV Repair', href: '/services/television' },
+              { icon: '📡', label: 'Microwave', href: '/services/microwave' },
+            ].map((s) => (
+              <Link key={s.href} href={s.href}
+                className="flex items-center gap-2.5 bg-white border border-gray-200 rounded-2xl px-5 py-3 text-sm font-semibold text-gray-700 hover:border-brand-300 hover:text-brand-700 shadow-soft hover:shadow-card transition-all duration-200">
+                <span className="text-xl">{s.icon}</span> {s.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16 relative overflow-hidden" style={{ background: 'linear-gradient(135deg,#0c1428 0%,#1e3a8a 100%)' }}>
+        <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center">
+          <h2 className="text-white text-4xl font-extrabold mb-4">Ready to Book?</h2>
+          <p className="text-blue-200 text-lg mb-8">30-minute response guaranteed across all Trichy locations.</p>
+          <a href="tel:+919344809038" className="btn-secondary btn btn-lg">📞 Call 93448 09038</a>
         </div>
       </section>
     </>

@@ -1,11 +1,6 @@
 'use client';
 import { useState } from 'react';
 
-/*
- * Setup: Go to https://web3forms.com → enter your Gmail → get Access Key
- * Replace WEB3FORMS_ACCESS_KEY below with your key.
- * All form submissions will be emailed to your Gmail instantly.
- */
 const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
 
 const services = [
@@ -28,7 +23,7 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
     const name = (data.get('name') as string).trim();
     const phone = (data.get('phone') as string).trim();
     if (!name) errs.name = 'Name is required';
-    if (!phone) errs.phone = 'Phone number is required';
+    if (!phone) errs.phone = 'Phone is required';
     else if (!/^[6-9]\d{9}$/.test(phone)) errs.phone = 'Enter a valid 10-digit mobile number';
     return errs;
   }
@@ -41,49 +36,42 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setErrors({});
     setStatus('loading');
-
     try {
-      const payload = {
-        access_key: WEB3FORMS_ACCESS_KEY,
-        subject: `New Lead: ${data.get('service') || 'Appliance Repair'} — ${data.get('name')}`,
-        from_name: 'Appliance Service Experts Website',
-        name: data.get('name'),
-        phone: data.get('phone'),
-        service: data.get('service'),
-        message: data.get('message') || 'No message provided',
-        botcheck: '',
-      };
-
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(payload),
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New Lead: ${data.get('service') || 'Repair'} — ${data.get('name')}`,
+          from_name: 'Appliance Service Experts Website',
+          name: data.get('name'),
+          phone: data.get('phone'),
+          service: data.get('service'),
+          message: data.get('message') || '—',
+          botcheck: '',
+        }),
       });
       const json = await res.json();
-      if (json.success) {
-        setStatus('success');
-        form.reset();
-      } else {
-        setStatus('error');
-      }
-    } catch {
-      setStatus('error');
-    }
+      setStatus(json.success ? 'success' : 'error');
+      if (json.success) form.reset();
+    } catch { setStatus('error'); }
   }
 
   if (status === 'success') {
     return (
-      <div className="text-center py-10 px-6">
-        <div className="text-5xl mb-4">✅</div>
+      <div className="text-center py-8 px-4 animate-fade-up">
+        <div className="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
+          <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
         <h3 className="text-xl font-bold text-gray-900 mb-2">We'll Call You Shortly!</h3>
-        <p className="text-gray-600">
-          Thanks for reaching out. Our team will contact you within 30 minutes.
+        <p className="text-gray-500 text-sm leading-relaxed">
+          Our team will reach out within <span className="font-semibold text-brand-600">30 minutes</span>. Get ready for fast, expert service!
         </p>
-        <button
-          onClick={() => setStatus('idle')}
-          className="mt-6 btn-outline text-sm"
-        >
-          Submit Another Request
+        <button onClick={() => setStatus('idle')}
+          className="mt-5 text-sm text-brand-600 hover:underline font-medium">
+          Submit another request →
         </button>
       </div>
     );
@@ -91,93 +79,69 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-4">
+
       {/* Name */}
       <div>
-        <label htmlFor="lead-name" className="block text-sm font-semibold text-gray-700 mb-1">
-          Your Name <span className="text-red-500">*</span>
+        <label htmlFor="lead-name" className="form-label">
+          Your Name <span className="text-red-400">*</span>
         </label>
-        <input
-          id="lead-name"
-          name="name"
-          type="text"
-          autoComplete="name"
-          placeholder="e.g. Ravi Kumar"
-          className={`w-full border rounded-xl px-4 py-3 text-base text-gray-900
-                      focus:outline-none focus:ring-2 focus:ring-brand-500
-                      ${errors.name ? 'border-red-400 bg-red-50' : 'border-gray-300 bg-white'}`}
-        />
-        {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
+        <div className="relative">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm">👤</span>
+          <input id="lead-name" name="name" type="text" autoComplete="name"
+            placeholder="e.g. Ravi Kumar"
+            className={`form-input pl-10 ${errors.name ? '!border-red-400 !bg-red-50' : ''}`} />
+        </div>
+        {errors.name && <p className="form-error">{errors.name}</p>}
       </div>
 
       {/* Phone */}
       <div>
-        <label htmlFor="lead-phone" className="block text-sm font-semibold text-gray-700 mb-1">
-          Mobile Number <span className="text-red-500">*</span>
+        <label htmlFor="lead-phone" className="form-label">
+          Mobile Number <span className="text-red-400">*</span>
         </label>
-        <input
-          id="lead-phone"
-          name="phone"
-          type="tel"
-          autoComplete="tel"
-          placeholder="e.g. 9876543210"
-          maxLength={10}
-          className={`w-full border rounded-xl px-4 py-3 text-base text-gray-900
-                      focus:outline-none focus:ring-2 focus:ring-brand-500
-                      ${errors.phone ? 'border-red-400 bg-red-50' : 'border-gray-300 bg-white'}`}
-        />
-        {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+        <div className="relative">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm">📞</span>
+          <input id="lead-phone" name="phone" type="tel" autoComplete="tel"
+            placeholder="10-digit mobile number" maxLength={10}
+            className={`form-input pl-10 ${errors.phone ? '!border-red-400 !bg-red-50' : ''}`} />
+        </div>
+        {errors.phone && <p className="form-error">{errors.phone}</p>}
       </div>
 
       {/* Service */}
       <div>
-        <label htmlFor="lead-service" className="block text-sm font-semibold text-gray-700 mb-1">
-          Appliance / Service Needed
-        </label>
-        <select
-          id="lead-service"
-          name="service"
-          className="w-full border border-gray-300 bg-white rounded-xl px-4 py-3 text-base
-                     text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-500"
-        >
-          <option value="">Select appliance…</option>
-          {services.map((s) => (
-            <option key={s} value={s}>{s}</option>
-          ))}
-        </select>
+        <label htmlFor="lead-service" className="form-label">Appliance Needed</label>
+        <div className="relative">
+          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm">🔧</span>
+          <select id="lead-service" name="service" className="form-select pl-10">
+            <option value="">Select appliance…</option>
+            {services.map((s) => <option key={s} value={s}>{s}</option>)}
+          </select>
+        </div>
       </div>
 
       {/* Message — hidden in compact mode */}
       {!compact && (
         <div>
-          <label htmlFor="lead-message" className="block text-sm font-semibold text-gray-700 mb-1">
-            Describe the Problem (optional)
-          </label>
-          <textarea
-            id="lead-message"
-            name="message"
-            rows={3}
-            placeholder="e.g. AC not cooling, strange noise from washing machine…"
-            className="w-full border border-gray-300 bg-white rounded-xl px-4 py-3 text-base
-                       text-gray-900 focus:outline-none focus:ring-2 focus:ring-brand-500 resize-none"
-          />
+          <label htmlFor="lead-message" className="form-label">Problem Description <span className="text-gray-400 font-normal">(optional)</span></label>
+          <textarea id="lead-message" name="message" rows={3}
+            placeholder="Describe the issue, e.g. AC not cooling, machine making noise…"
+            className="form-input resize-none" />
         </div>
       )}
 
-      {/* Honeypot anti-spam */}
+      {/* Honeypot */}
       <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} aria-hidden="true" />
 
       {status === 'error' && (
-        <p className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-4 py-3">
-          Something went wrong. Please call us directly at{' '}
+        <div className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+          Something went wrong. Call us at{' '}
           <a href="tel:+919344809038" className="font-semibold underline">93448 09038</a>.
-        </p>
+        </div>
       )}
 
-      <button
-        type="submit"
-        disabled={status === 'loading'}
-        className="btn-secondary w-full justify-center text-base disabled:opacity-60 disabled:cursor-not-allowed"
-      >
+      <button type="submit" disabled={status === 'loading'}
+        className="btn-secondary btn btn-lg w-full justify-center disabled:opacity-60 disabled:cursor-not-allowed">
         {status === 'loading' ? (
           <span className="flex items-center gap-2">
             <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
@@ -186,13 +150,11 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
             </svg>
             Sending…
           </span>
-        ) : (
-          'Get a Free Callback →'
-        )}
+        ) : '🚀 Get Free Callback'}
       </button>
 
       <p className="text-xs text-gray-400 text-center">
-        We'll call you back within 30 minutes. No spam, ever.
+        We call back within 30 minutes · No spam · 100% free
       </p>
     </form>
   );
