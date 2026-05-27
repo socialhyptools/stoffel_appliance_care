@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import { AcIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
   title: 'AC Repair & Service in Trichy | All Brands',
@@ -26,7 +27,7 @@ const schema = {
 export default function ACPage() {
   return (
     <ServicePageTemplate
-      icon="❄️"
+      icon={<AcIcon className="w-14 h-14" />}
       title="AC Repair & Service in Trichy"
       tagline="Split, window & cassette AC — cooling issues, gas refill, deep cleaning & installation by certified technicians."
       description="Our AC technicians are trained on all types of air conditioners — split, window, cassette, and portable units. We diagnose and fix cooling failures, refrigerant leaks, compressor faults, PCB failures, water leakage, and unusual noise issues. AC deep cleaning service extends the life of your unit and keeps energy bills low. We also handle new AC installation, uninstallation, and relocation across Trichy."

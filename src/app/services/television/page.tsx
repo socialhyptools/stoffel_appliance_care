@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import { TvIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
   title: 'TV Repair in Trichy | LED, LCD, Smart TV',
@@ -24,7 +25,7 @@ const schema = {
 export default function TelevisionPage() {
   return (
     <ServicePageTemplate
-      icon="📺"
+      icon={<TvIcon className="w-14 h-14" />}
       title="TV Repair in Trichy"
       tagline="LED, LCD, OLED & Smart TV repair — panel, main board, sound, display issues fixed at your doorstep."
       description="Our TV repair technicians handle all types of televisions including LED, LCD, OLED, QLED, and Smart TVs. We diagnose and fix display issues, backlight failures, main board faults, power supply problems, and sound issues. Smart TV software and connectivity problems are also resolved. All repairs come with a warranty, and we carry common spare parts to ensure same-day completion."

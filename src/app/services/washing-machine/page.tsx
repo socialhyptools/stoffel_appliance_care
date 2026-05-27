@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import { WashingMachineIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
   title: 'Washing Machine Repair in Trichy | All Brands',
@@ -24,7 +25,7 @@ const schema = {
 export default function WashingMachinePage() {
   return (
     <ServicePageTemplate
-      icon="🫧"
+      icon={<WashingMachineIcon className="w-14 h-14" />}
       title="Washing Machine Repair in Trichy"
       tagline="Front-load & top-load washing machine repair — drum, motor, drainage, PCB faults fixed at your doorstep."
       description="We repair all types of washing machines including fully automatic front-load, fully automatic top-load, and semi-automatic models. Our technicians carry common spare parts so most repairs are completed in a single visit. We fix drum faults, motor failures, water inlet and drainage issues, PCB damage, lid/door problems, and error codes. We service all major brands and provide a 90–180 day warranty on all repairs."

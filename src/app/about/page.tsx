@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Target, Zap, Lock, Award, Phone } from 'lucide-react';
 import AdUnit from '@/components/AdUnit';
 
 export const metadata: Metadata = {
   title: 'About Us | Appliance Service Experts Trichy',
-  description: "Appliance Service Experts — Trichy's trusted home appliance repair service. 30+ certified technicians, multi-brand expertise, doorstep service across 50+ locations.",
+  description:
+    "Appliance Service Experts — Trichy's trusted home appliance repair service. 30+ certified technicians, multi-brand expertise, doorstep service across 50+ locations.",
 };
 
 const values = [
-  { icon: '🎯', title: 'Transparency', desc: 'Full cost estimate before any work begins. You approve it — then we start.', color: '#2563eb' },
-  { icon: '⚡', title: 'Speed', desc: '30-minute response time. Same-day service in most Trichy locations.', color: '#d97706' },
-  { icon: '🔒', title: 'Trust', desc: 'Background-verified technicians with official ID. Your home is safe with us.', color: '#059669' },
-  { icon: '🛡️', title: 'Quality', desc: 'Genuine parts, skilled hands, and 90–180 day warranty on every single repair.', color: '#7c3aed' },
+  { icon: Target, title: 'Transparency', desc: 'Full cost estimate before any work begins. You approve it — then we start.', color: '#2563eb' },
+  { icon: Zap, title: 'Speed', desc: '30-minute response time. Same-day service in most Trichy locations.', color: '#d97706' },
+  { icon: Lock, title: 'Trust', desc: 'Background-verified technicians with official ID. Your home is safe with us.', color: '#059669' },
+  { icon: Award, title: 'Quality', desc: 'Genuine parts, skilled hands, and 90–180 day warranty on every single repair.', color: '#7c3aed' },
 ];
 
 const stats = [
@@ -36,7 +38,7 @@ export default function AboutPage() {
               About <span className="text-gradient-blue">Appliance Service Experts</span>
             </h1>
             <p className="text-blue-200 text-lg leading-relaxed">
-              Trichy's most trusted home appliance repair service — certified technicians, genuine parts, doorstep convenience.
+              Trichy&apos;s most trusted home appliance repair service — certified technicians, genuine parts, doorstep convenience.
             </p>
           </div>
         </div>
@@ -57,21 +59,23 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
             <span className="badge mb-5">Who We Are</span>
-            <h2 className="text-3xl font-extrabold text-gray-900 mb-5">Trichy's Home Appliance Repair Specialists</h2>
+            <h2 className="text-3xl font-extrabold text-gray-900 mb-5">Trichy&apos;s Home Appliance Repair Specialists</h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               Appliance Service Experts is a professional home appliance repair company based in Tiruchirappalli, Tamil Nadu. We provide fast, reliable, and affordable <strong>doorstep repair services</strong> for AC, washing machines, refrigerators, televisions, and microwave ovens.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our team of 30+ certified technicians covers 50+ areas in Trichy. We believe in transparent pricing — you'll always know the full cost before we begin. Every repair we carry out is backed by a 90–180 day warranty.
+              Our team of 30+ certified technicians covers 50+ areas in Trichy. We believe in transparent pricing — you&apos;ll always know the full cost before we begin. Every repair we carry out is backed by a 90–180 day warranty.
             </p>
             <Link href="/contact" className="btn-secondary btn btn-lg">Get in Touch →</Link>
           </div>
 
-          {/* Stats */}
           <div className="grid grid-cols-2 gap-4">
             {stats.map((s) => (
-              <div key={s.label} className="rounded-2xl p-6 text-center border border-gray-100 shadow-soft hover:shadow-card transition-all duration-300"
-                style={{ background: 'linear-gradient(135deg,#f8faff 0%,#fff 100%)' }}>
+              <div
+                key={s.label}
+                className="rounded-2xl p-6 text-center border border-gray-100 shadow-soft hover:shadow-card transition-all duration-300"
+                style={{ background: 'linear-gradient(135deg,#f8faff 0%,#fff 100%)' }}
+              >
                 <div className="text-4xl font-black text-brand-700 mb-1">{s.value}</div>
                 <div className="text-sm text-gray-500 font-medium">{s.label}</div>
               </div>
@@ -98,17 +102,24 @@ export default function AboutPage() {
           <h2 className="text-3xl font-extrabold text-gray-900">Our Core Values</h2>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((v) => (
-            <div key={v.title}
-              className="bg-white rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 border border-gray-100 text-center">
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mx-auto mb-4"
-                style={{ background: `${v.color}15`, border: `1.5px solid ${v.color}30` }}>
-                {v.icon}
+          {values.map((v) => {
+            const Icon = v.icon;
+            return (
+              <div
+                key={v.title}
+                className="bg-white rounded-2xl p-6 shadow-card hover:shadow-card-hover hover:-translate-y-1.5 transition-all duration-300 border border-gray-100 text-center"
+              >
+                <div
+                  className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+                  style={{ background: `${v.color}15`, border: `1.5px solid ${v.color}30`, color: v.color }}
+                >
+                  <Icon className="w-7 h-7" />
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">{v.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">{v.title}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{v.desc}</p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 
@@ -122,8 +133,12 @@ export default function AboutPage() {
           <h2 className="text-white text-4xl font-extrabold mb-4">Experience the Difference</h2>
           <p className="text-blue-200 text-lg mb-8">Join thousands of satisfied households across Trichy.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919344809038" className="btn-secondary btn btn-lg">📞 Book a Repair</a>
-            <Link href="/services" className="btn-outline-white btn btn-lg">View All Services</Link>
+            <a href="tel:+919344809038" className="btn-secondary btn btn-lg">
+              <Phone className="w-5 h-5" /> Book a Repair
+            </a>
+            <Link href="/services" className="btn-outline-white btn btn-lg">
+              View All Services
+            </Link>
           </div>
         </div>
       </section>

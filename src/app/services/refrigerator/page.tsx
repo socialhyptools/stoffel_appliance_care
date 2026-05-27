@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import { RefrigeratorIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
   title: 'Refrigerator Repair in Trichy | All Brands',
@@ -24,7 +25,7 @@ const schema = {
 export default function RefrigeratorPage() {
   return (
     <ServicePageTemplate
-      icon="🧊"
+      icon={<RefrigeratorIcon className="w-14 h-14" />}
       title="Refrigerator Repair in Trichy"
       tagline="Single-door, double-door & side-by-side fridge repair — cooling, compressor, gas charging & more."
       description="We repair all models of refrigerators — single-door, double-door, frost-free, and side-by-side units. Our technicians diagnose cooling failures, gas leaks, compressor faults, thermostat and PCB issues, and door seal problems. We also handle ice maker repairs, defrost system failures, and water dispenser issues. With genuine spare parts and a comprehensive warranty, your fridge is in safe hands."

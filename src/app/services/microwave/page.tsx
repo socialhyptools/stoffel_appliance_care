@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ServicePageTemplate from '@/components/ServicePageTemplate';
+import { MicrowaveIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
   title: 'Microwave Oven Repair in Trichy | All Brands',
@@ -24,7 +25,7 @@ const schema = {
 export default function MicrowavePage() {
   return (
     <ServicePageTemplate
-      icon="📡"
+      icon={<MicrowaveIcon className="w-14 h-14" />}
       title="Microwave Oven Repair in Trichy"
       tagline="Solo, grill & convection microwave repairs — heating issues, magnetron, turntable & control faults fixed fast."
       description="We repair all types of microwave ovens including solo, grill, and convection models. Our technicians diagnose heating failures, magnetron faults, turntable motor issues, door latch problems, and control panel malfunctions. We use genuine spare parts and our repairs are backed by a comprehensive warranty. Most microwave repairs are completed in a single visit at your doorstep."

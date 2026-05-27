@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { User, Phone, Wrench, Send } from 'lucide-react';
 
 const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
 
@@ -65,7 +66,7 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
             <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2">We'll Call You Shortly!</h3>
+        <h3 className="text-xl font-bold text-gray-900 mb-2">We&apos;ll Call You Shortly!</h3>
         <p className="text-gray-500 text-sm leading-relaxed">
           Our team will reach out within <span className="font-semibold text-brand-600">30 minutes</span>. Get ready for fast, expert service!
         </p>
@@ -86,7 +87,9 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
           Your Name <span className="text-red-400">*</span>
         </label>
         <div className="relative">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm">👤</span>
+          <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
+            <User className="w-4 h-4" />
+          </span>
           <input id="lead-name" name="name" type="text" autoComplete="name"
             placeholder="e.g. Ravi Kumar"
             className={`form-input pl-10 ${errors.name ? '!border-red-400 !bg-red-50' : ''}`} />
@@ -100,7 +103,9 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
           Mobile Number <span className="text-red-400">*</span>
         </label>
         <div className="relative">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm">📞</span>
+          <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
+            <Phone className="w-4 h-4" />
+          </span>
           <input id="lead-phone" name="phone" type="tel" autoComplete="tel"
             placeholder="10-digit mobile number" maxLength={10}
             className={`form-input pl-10 ${errors.phone ? '!border-red-400 !bg-red-50' : ''}`} />
@@ -112,7 +117,9 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
       <div>
         <label htmlFor="lead-service" className="form-label">Appliance Needed</label>
         <div className="relative">
-          <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm">🔧</span>
+          <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
+            <Wrench className="w-4 h-4" />
+          </span>
           <select id="lead-service" name="service" className="form-select pl-10">
             <option value="">Select appliance…</option>
             {services.map((s) => <option key={s} value={s}>{s}</option>)}
@@ -150,7 +157,11 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
             </svg>
             Sending…
           </span>
-        ) : '🚀 Get Free Callback'}
+        ) : (
+          <>
+            <Send className="w-4 h-4" /> Get Free Callback
+          </>
+        )}
       </button>
 
       <p className="text-xs text-gray-400 text-center">
