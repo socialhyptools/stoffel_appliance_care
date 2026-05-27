@@ -4,7 +4,7 @@ import AdUnit from '@/components/AdUnit';
 export const metadata: Metadata = {
   title: 'Service Areas in Trichy | Home Appliance Repair',
   description:
-    'Hire Expert Service Center covers 50+ locations in Trichy — Thillai Nagar, KK Nagar, Srirangam, Woraiyur, Anna Nagar & more. Call 9344809038.',
+    'Appliance Service Experts covers 50+ locations in Trichy — Thillai Nagar, KK Nagar, Srirangam, Woraiyur, Anna Nagar & more. Call 9344809038.',
 };
 
 const areas = [
@@ -28,7 +28,7 @@ const schema = {
   name: 'Home Appliance Repair Service Areas',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Hire Expert Service Center',
+    name: 'Appliance Service Experts',
     telephone: '+919344809038',
   },
   areaServed: areas.map((a) => ({ '@type': 'Place', name: `${a}, Tiruchirappalli` })),

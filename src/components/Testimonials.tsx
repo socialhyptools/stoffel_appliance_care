@@ -3,7 +3,7 @@ const reviews = [
     name: 'Krishna',
     location: 'Karumandabam, Trichy',
     rating: 5,
-    text: 'The technician arrived within 30 minutes and fixed my washing machine on the spot. Very professional and transparent about the cost. Highly recommend Hire Expert Service Center!',
+    text: 'The technician arrived within 30 minutes and fixed my washing machine on the spot. Very professional and transparent about the cost. Highly recommend Appliance Service Experts!',
   },
   {
     name: 'Rajkumar',

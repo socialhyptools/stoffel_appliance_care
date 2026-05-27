@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Hire Expert Service Center',
+  title: 'Privacy Policy | Appliance Service Experts',
   description:
-    'Privacy Policy for Hire Expert Service Center — how we collect, use, and protect your data. Third-party ad serving disclosure (Google AdSense).',
+    'Privacy Policy for Appliance Service Experts — how we collect, use, and protect your data. Third-party ad serving disclosure (Google AdSense).',
   robots: { index: false },
 };
 
@@ -18,7 +18,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Who We Are</h2>
           <p>
-            Hire Expert Service Center ("we", "us", "our") operates the website at yourdomain.com.
+            Appliance Service Experts ("we", "us", "our") operates the website at yourdomain.com.
             We provide home appliance repair and service in Tiruchirappalli, Tamil Nadu, India.
             Contact us at <a href="tel:+919344809038" className="text-brand-600 hover:underline">93448 09038</a>.
           </p>

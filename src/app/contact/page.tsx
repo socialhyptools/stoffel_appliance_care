@@ -1,20 +1,21 @@
 import type { Metadata } from 'next';
 import AdUnit from '@/components/AdUnit';
+import LeadForm from '@/components/LeadForm';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Hire Expert Service Center Trichy',
+  title: 'Contact Us | Appliance Service Experts Trichy',
   description:
-    'Contact Hire Expert Service Center for home appliance repair in Trichy. Call 9344809038 or WhatsApp. Same-day service, 30-min response.',
+    'Contact Appliance Service Experts for home appliance repair in Trichy. Call 9344809038 or WhatsApp. Same-day service, 30-min response.',
 };
 
 const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  name: 'Contact Hire Expert Service Center',
+  name: 'Contact Appliance Service Experts',
   url: 'https://yourdomain.com/contact',
   mainEntity: {
     '@type': 'LocalBusiness',
-    name: 'Hire Expert Service Center',
+    name: 'Appliance Service Experts',
     telephone: '+919344809038',
     address: {
       '@type': 'PostalAddress',
@@ -37,21 +38,32 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <h1 className="text-white text-4xl font-extrabold mb-4">Contact Us</h1>
           <p className="text-blue-200 text-lg max-w-xl">
-            Call, WhatsApp, or drop us a message. We respond within minutes.
+            Book a repair, ask a question, or just say hello — we respond within 30 minutes.
           </p>
         </div>
       </section>
 
-      {/* Ad — separated from hero CTAs */}
+      {/* Ad — separated from hero */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 ad-separator">
         <AdUnit slot="3637383940" format="horizontal" />
       </div>
 
+      {/* Lead Form + Contact Info side by side */}
       <section className="py-12 max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          {/* Contact info */}
-          <div className="space-y-6">
-            <h2 className="mb-6">Get in Touch</h2>
+
+          {/* Lead Form */}
+          <div className="card shadow-lg">
+            <h2 className="text-2xl font-bold text-gray-900 mb-1">Book a Free Callback</h2>
+            <p className="text-gray-500 text-sm mb-6">
+              Fill in your details and we'll call you back within 30 minutes.
+            </p>
+            <LeadForm />
+          </div>
+
+          {/* Contact details */}
+          <div className="space-y-5">
+            <h2 className="mb-2">Other Ways to Reach Us</h2>
 
             <div className="card flex gap-4">
               <span className="text-3xl">📞</span>
@@ -95,11 +107,35 @@ export default function ContactPage() {
               <span className="text-3xl">🕐</span>
               <div>
                 <h3 className="text-base mb-1">Working Hours</h3>
-                <p className="text-gray-700 text-sm">Monday – Sunday<br />8:00 AM – 8:00 PM</p>
+                <p className="text-gray-700 text-sm">Monday – Sunday · 8:00 AM – 8:00 PM</p>
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            {/* Services quick list */}
+            <div className="card bg-brand-50 border-brand-200">
+              <h3 className="text-brand-700 mb-3">What We Repair</h3>
+              <ul className="space-y-2">
+                {[
+                  { icon: '❄️', label: 'AC Repair & Service', href: '/services/air-conditioner' },
+                  { icon: '🫧', label: 'Washing Machine Repair', href: '/services/washing-machine' },
+                  { icon: '🧊', label: 'Refrigerator Repair', href: '/services/refrigerator' },
+                  { icon: '📺', label: 'TV Repair', href: '/services/television' },
+                  { icon: '📡', label: 'Microwave Repair', href: '/services/microwave' },
+                ].map((s) => (
+                  <li key={s.href}>
+                    <a
+                      href={s.href}
+                      className="flex items-center gap-3 py-1 text-sm text-brand-700
+                                 hover:text-brand-900 font-medium transition-colors"
+                    >
+                      <span>{s.icon}</span> {s.label} <span className="ml-auto">→</span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <a href="tel:+919344809038" className="btn-secondary text-base">
                 📞 Call Now
               </a>
@@ -112,40 +148,6 @@ export default function ContactPage() {
               >
                 WhatsApp
               </a>
-            </div>
-          </div>
-
-          {/* Service summary */}
-          <div className="card h-fit">
-            <h3 className="mb-4">What We Repair</h3>
-            <ul className="space-y-3">
-              {[
-                { icon: '❄️', service: 'AC Repair & Service', href: '/services/air-conditioner' },
-                { icon: '🫧', service: 'Washing Machine Repair', href: '/services/washing-machine' },
-                { icon: '🧊', service: 'Refrigerator Repair', href: '/services/refrigerator' },
-                { icon: '📺', service: 'TV Repair', href: '/services/television' },
-                { icon: '📡', service: 'Microwave Repair', href: '/services/microwave' },
-              ].map((s) => (
-                <li key={s.href}>
-                  <a
-                    href={s.href}
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-brand-50
-                               text-gray-700 hover:text-brand-600 transition-colors min-h-[48px]"
-                  >
-                    <span className="text-2xl">{s.icon}</span>
-                    <span className="font-medium">{s.service}</span>
-                    <span className="ml-auto text-brand-500">→</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-
-            <div className="mt-6 p-4 bg-accent-50 rounded-xl border border-accent-200">
-              <p className="text-sm text-gray-700">
-                <span className="font-semibold text-accent-600">₹399</span> inspection charge ·{' '}
-                <span className="font-semibold text-accent-600">90-day</span> warranty ·{' '}
-                <span className="font-semibold text-accent-600">30-min</span> response
-              </p>
             </div>
           </div>
         </div>

@@ -14,8 +14,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://yourdomain.com'),
   title: {
-    default: 'Hire Expert Service Center | Home Appliance Repair Trichy',
-    template: '%s | Hire Expert Service Center',
+    default: 'Appliance Service Experts | Home Appliance Repair Trichy',
+    template: '%s | Appliance Service Experts',
   },
   description:
     'Expert doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Trichy. 30-min response · 90-day warranty · ₹399 inspection. Call 9344809038.',
@@ -28,18 +28,18 @@ export const metadata: Metadata = {
     'microwave repair Trichy',
     'doorstep appliance service',
   ],
-  authors: [{ name: 'Hire Expert Service Center' }],
+  authors: [{ name: 'Appliance Service Experts' }],
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    siteName: 'Hire Expert Service Center',
-    title: 'Hire Expert Service Center | Home Appliance Repair Trichy',
+    siteName: 'Appliance Service Experts',
+    title: 'Appliance Service Experts | Home Appliance Repair Trichy',
     description:
       'Expert doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Trichy.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Hire Expert Service Center',
+    title: 'Appliance Service Experts',
     description: 'Expert doorstep appliance repair in Trichy. Call 9344809038.',
   },
   robots: { index: true, follow: true },
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Hire Expert Service Center',
+  name: 'Appliance Service Experts',
   alternateName: 'Home Appliance Trichy',
   description:
     'Professional home appliance repair and installation service in Trichy — AC, Washing Machine, Refrigerator, TV, Microwave.',

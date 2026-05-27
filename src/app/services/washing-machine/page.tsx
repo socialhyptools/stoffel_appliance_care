@@ -15,7 +15,7 @@ const schema = {
   serviceType: 'Washing Machine Repair',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Hire Expert Service Center',
+    name: 'Appliance Service Experts',
     telephone: '+919344809038',
   },
   areaServed: { '@type': 'City', name: 'Tiruchirappalli' },

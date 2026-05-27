@@ -3,9 +3,10 @@ import Link from 'next/link';
 import AdUnit from '@/components/AdUnit';
 import FAQ from '@/components/FAQ';
 import Testimonials from '@/components/Testimonials';
+import LeadForm from '@/components/LeadForm';
 
 export const metadata: Metadata = {
-  title: 'Home Appliance Repair Trichy | Hire Expert Service Center',
+  title: 'Home Appliance Repair Trichy | Appliance Service Experts',
   description:
     'Doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Trichy. 30-min response · 90-day warranty · ₹399 inspection. 30+ expert technicians. Call 9344809038.',
   alternates: { canonical: 'https://yourdomain.com' },
@@ -134,41 +135,51 @@ export default function HomePage() {
 
       {/* ── HERO ── */}
       <section className="bg-gradient-to-br from-brand-700 via-brand-600 to-brand-500 text-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
-          <div className="max-w-2xl">
-            <p className="text-accent-400 font-semibold text-sm uppercase tracking-widest mb-3">
-              Trichy's Trusted Appliance Experts
-            </p>
-            <h1 className="text-white text-4xl sm:text-5xl font-extrabold leading-tight mb-5">
-              Fast Doorstep<br />Appliance Repair
-            </h1>
-            <p className="text-blue-100 text-lg sm:text-xl mb-8 leading-relaxed">
-              AC · Washing Machine · Refrigerator · TV · Microwave — all repaired at your home by
-              certified technicians. Same-day service across Trichy.
-            </p>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left: copy */}
+            <div>
+              <p className="text-accent-400 font-semibold text-sm uppercase tracking-widest mb-3">
+                Trichy's Trusted Appliance Experts
+              </p>
+              <h1 className="text-white text-4xl sm:text-5xl font-extrabold leading-tight mb-5">
+                Fast Doorstep<br />Appliance Repair
+              </h1>
+              <p className="text-blue-100 text-lg sm:text-xl mb-8 leading-relaxed">
+                AC · Washing Machine · Refrigerator · TV · Microwave — all repaired at your home by
+                certified technicians. Same-day service across Trichy.
+              </p>
 
-            {/* CTA Buttons — 8px gap, ≥48px tap targets */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+919344809038" className="btn-secondary text-base">
-                📞 Call Now: 93448 09038
-              </a>
-              <a
-                href="https://wa.me/919344809038"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-outline border-white text-white hover:bg-white hover:text-brand-700 text-base"
-              >
-                WhatsApp Us
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:+919344809038" className="btn-secondary text-base">
+                  📞 Call Now: 93448 09038
+                </a>
+                <a
+                  href="https://wa.me/919344809038"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-outline border-white text-white hover:bg-white hover:text-brand-700 text-base"
+                >
+                  WhatsApp Us
+                </a>
+              </div>
+
+              <div className="flex flex-wrap gap-3 mt-8">
+                {['✅ 90-Day Warranty', '⚡ 30-Min Response', '💰 ₹399 Inspection'].map((b) => (
+                  <span key={b} className="bg-white/20 text-white text-sm font-medium px-4 py-2 rounded-full">
+                    {b}
+                  </span>
+                ))}
+              </div>
             </div>
 
-            {/* Trust badges */}
-            <div className="flex flex-wrap gap-3 mt-8">
-              {['✅ 90-Day Warranty', '⚡ 30-Min Response', '💰 ₹399 Inspection'].map((b) => (
-                <span key={b} className="bg-white/20 text-white text-sm font-medium px-4 py-2 rounded-full">
-                  {b}
-                </span>
-              ))}
+            {/* Right: lead form card */}
+            <div className="bg-white rounded-2xl shadow-2xl p-6 sm:p-8">
+              <h2 className="text-gray-900 text-xl font-bold mb-1">Get a Free Callback</h2>
+              <p className="text-gray-500 text-sm mb-5">
+                Fill in your details — we'll call you back within 30 minutes.
+              </p>
+              <LeadForm compact />
             </div>
           </div>
         </div>

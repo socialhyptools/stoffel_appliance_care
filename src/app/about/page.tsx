@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import AdUnit from '@/components/AdUnit';
 
 export const metadata: Metadata = {
-  title: 'About Us | Hire Expert Service Center Trichy',
+  title: 'About Us | Appliance Service Experts Trichy',
   description:
-    'Hire Expert Service Center — Trichy\'s trusted home appliance repair service. 30+ certified technicians, multi-brand expertise, doorstep service across 50+ locations.',
+    'Appliance Service Experts — Trichy\'s trusted home appliance repair service. 30+ certified technicians, multi-brand expertise, doorstep service across 50+ locations.',
 };
 
 export default function AboutPage() {
@@ -29,7 +29,7 @@ export default function AboutPage() {
         <div>
           <h2 className="mb-4">Who We Are</h2>
           <p className="text-gray-700 leading-relaxed">
-            Hire Expert Service Center is a professional home appliance repair and service company
+            Appliance Service Experts is a professional home appliance repair and service company
             based in Tiruchirappalli, Tamil Nadu. We provide fast, reliable, and affordable
             doorstep repair services for all major home appliances including air conditioners,
             washing machines, refrigerators, televisions, and microwave ovens.
