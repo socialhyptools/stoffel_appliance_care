@@ -12,8 +12,8 @@ import LeadForm from '@/components/LeadForm';
 import { AcIcon, WashingMachineIcon, RefrigeratorIcon, TvIcon, MicrowaveIcon, WhatsAppIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Home Appliance Repair Trichy | Appliance Service Experts',
-  description: 'Doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Trichy. 30-min response · 90-day warranty · ₹399 inspection. 30+ expert technicians. Call 9344809038.',
+  title: 'Home Appliance Repair Madurai | Stoffel Appliance Care',
+  description: 'Doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Madurai. 30-min response · 90-day warranty · ₹249 inspection. 30+ expert technicians. Call 8838893560.',
   alternates: { canonical: 'https://yourdomain.com' },
 };
 
@@ -42,16 +42,16 @@ const features = [
   { icon: <Home className="w-6 h-6" />, title: 'Doorstep Service', desc: 'We come to you. No hassle of carrying heavy appliances.' },
   { icon: <Wrench className="w-6 h-6" />, title: 'Multi-Brand Expertise', desc: 'Samsung, LG, Whirlpool, Voltas, Daikin, Sony, Panasonic & 50+ more.' },
   { icon: <ShieldCheck className="w-6 h-6" />, title: '90–180 Day Warranty', desc: 'All repairs covered. Same issue recurs? We fix it free.' },
-  { icon: <Banknote className="w-6 h-6" />, title: 'Transparent Pricing', desc: '₹399 inspection. Full estimate before any work starts.' },
-  { icon: <Zap className="w-6 h-6" />, title: '30-Minute Response', desc: 'Quick dispatch. Same-day service in most Trichy areas.' },
+  { icon: <Banknote className="w-6 h-6" />, title: 'Transparent Pricing', desc: '₹249 inspection. Full estimate before any work starts.' },
+  { icon: <Zap className="w-6 h-6" />, title: '30-Minute Response', desc: 'Quick dispatch. Same-day service in most Madurai areas.' },
   { icon: <Shield className="w-6 h-6" />, title: 'Certified Technicians', desc: 'Background-verified, trained professionals with years of experience.' },
 ];
 
 const heroBadges = [
   { icon: <CheckCircle2 className="w-4 h-4" />, label: '90-Day Warranty' },
   { icon: <Zap className="w-4 h-4" />, label: '30-Min Response' },
-  { icon: <Banknote className="w-4 h-4" />, label: '₹399 Inspection' },
-  { icon: <Wrench className="w-4 h-4" />, label: 'All Brands' },
+  { icon: <Banknote className="w-4 h-4" />, label: '₹249 Inspection' },
+  { icon: <Wrench className="w-4 h-4" />, label: '10 years experience technicians' },
 ];
 
 const brands = ['Samsung', 'LG', 'Whirlpool', 'Voltas', 'Daikin', 'Sony', 'Panasonic', 'IFB', 'Godrej', 'Haier', 'Bosch', 'Carrier', 'Blue Star', 'Hitachi', 'O General', 'Onida'];
@@ -61,7 +61,7 @@ const homeSchema = {
   '@type': 'FAQPage',
   mainEntity: [
     { '@type': 'Question', name: 'How quickly can you send a technician?', acceptedAnswer: { '@type': 'Answer', text: '30-minute response time. Technician arrives within 30–60 minutes of your call.' } },
-    { '@type': 'Question', name: 'What is the inspection charge?', acceptedAnswer: { '@type': 'Answer', text: '₹399. After diagnosis, full cost estimate before work begins.' } },
+    { '@type': 'Question', name: 'What is the inspection charge?', acceptedAnswer: { '@type': 'Answer', text: '₹249. After diagnosis, full cost estimate before work begins.' } },
   ],
 };
 
@@ -81,13 +81,13 @@ export default function HomePage() {
             <div className="animate-fade-up">
               <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-blue-200 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 backdrop-blur-sm">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                Trichy&apos;s Most Trusted Repair Experts
+                Madurai&apos;s Most Trusted Repair Experts
               </div>
 
               <h1 className="text-white font-extrabold leading-[1.1] mb-6" style={{ fontSize: 'clamp(2.2rem,5vw,3.5rem)' }}>
                 Fast Doorstep<br />
                 <span className="text-gradient-blue">Home Appliance</span><br />
-                Repair in Trichy
+                Repair in Madurai
               </h1>
 
               <p className="text-blue-200 text-lg leading-relaxed mb-8 max-w-lg">
@@ -95,10 +95,10 @@ export default function HomePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
-                <a href="tel:+919344809038" className="btn-secondary btn btn-lg">
-                  <Phone className="w-5 h-5" /> Call Now: 93448 09038
+                <a href="tel:+918838893560" className="btn-secondary btn btn-lg">
+                  <Phone className="w-5 h-5" /> Call Now: 88388 93560
                 </a>
-                <a href="https://wa.me/919344809038" target="_blank" rel="noopener noreferrer"
+                <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer"
                   className="btn-outline-white btn btn-lg">
                   <WhatsAppIcon className="w-5 h-5" /> WhatsApp Us
                 </a>
@@ -198,13 +198,13 @@ export default function HomePage() {
                   <CalendarDays className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Book a Repair Today</h3>
-                <p className="text-blue-200 text-sm leading-relaxed">Same-day service available across all 50+ Trichy locations.</p>
+                <p className="text-blue-200 text-sm leading-relaxed">Same-day service available across all 50+ Madurai locations.</p>
               </div>
-              <a href="tel:+919344809038"
+              <a href="tel:+918838893560"
                 className="mt-6 inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3
                            bg-white text-brand-700 font-bold text-sm rounded-xl
                            hover:bg-blue-50 transition-colors">
-                <Phone className="w-4 h-4" /> Call 93448 09038
+                <Phone className="w-4 h-4" /> Call 88388 93560
               </a>
             </div>
           </div>
@@ -251,13 +251,13 @@ export default function HomePage() {
             <div>
               <span className="badge mb-5">Why Choose Us</span>
               <h2 className="text-4xl font-extrabold text-gray-900 mb-5">
-                Why Trichy Trusts<br /><span className="text-gradient">Appliance Service Experts</span>
+                Why Madurai Trusts<br /><span className="text-gradient">Stoffel Appliance Care</span>
               </h2>
               <p className="text-gray-500 text-lg leading-relaxed mb-8">
                 From a simple AC service to a complex refrigerator repair — we show up fast, diagnose right, fix it the first time, and back it with a warranty.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+919344809038" className="btn-secondary btn btn-lg">
+                <a href="tel:+918838893560" className="btn-secondary btn btn-lg">
                   <Phone className="w-5 h-5" /> Book a Repair
                 </a>
                 <Link href="/about" className="btn-primary btn btn-lg">Learn About Us</Link>
@@ -319,10 +319,10 @@ export default function HomePage() {
             Call now or WhatsApp. A certified technician reaches your door in 30 minutes, flat.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919344809038" className="btn-secondary btn btn-lg">
-              <Phone className="w-5 h-5" /> 93448 09038
+            <a href="tel:+918838893560" className="btn-secondary btn btn-lg">
+              <Phone className="w-5 h-5" /> 88388 93560
             </a>
-            <a href="https://wa.me/919344809038" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn btn-lg">
+            <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn btn-lg">
               <WhatsAppIcon className="w-5 h-5" /> WhatsApp
             </a>
           </div>

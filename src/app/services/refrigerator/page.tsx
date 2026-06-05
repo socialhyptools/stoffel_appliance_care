@@ -3,9 +3,9 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 import { RefrigeratorIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Refrigerator Repair in Trichy | All Brands',
+  title: 'Refrigerator Repair in Madurai | All Brands',
   description:
-    'Fridge repair in Trichy — cooling failure, compressor, gas charging, door seal & more. Samsung, LG, Whirlpool, Godrej. 90-day warranty. Call 9344809038.',
+    'Fridge repair in Madurai — cooling failure, compressor, gas charging, door seal & more. Samsung, LG, Whirlpool, Godrej. 90-day warranty. Call 8838893560.',
   alternates: { canonical: 'https://yourdomain.com/services/refrigerator' },
 };
 
@@ -16,17 +16,17 @@ const schema = {
   serviceType: 'Refrigerator Repair',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Appliance Service Experts',
-    telephone: '+919344809038',
+    name: 'Stoffel Appliance Care',
+    telephone: '+918838893560',
   },
-  areaServed: { '@type': 'City', name: 'Tiruchirappalli' },
+  areaServed: { '@type': 'City', name: 'Madurai' },
 };
 
 export default function RefrigeratorPage() {
   return (
     <ServicePageTemplate
       icon={<RefrigeratorIcon className="w-14 h-14" />}
-      title="Refrigerator Repair in Trichy"
+      title="Refrigerator Repair in Madurai"
       tagline="Single-door, double-door & side-by-side fridge repair — cooling, compressor, gas charging & more."
       description="We repair all models of refrigerators — single-door, double-door, frost-free, and side-by-side units. Our technicians diagnose cooling failures, gas leaks, compressor faults, thermostat and PCB issues, and door seal problems. We also handle ice maker repairs, defrost system failures, and water dispenser issues. With genuine spare parts and a comprehensive warranty, your fridge is in safe hands."
       problems={[

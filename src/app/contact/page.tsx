@@ -5,27 +5,27 @@ import LeadForm from '@/components/LeadForm';
 import { WhatsAppIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Appliance Service Experts Trichy',
-  description: 'Contact Appliance Service Experts for home appliance repair in Trichy. Call 9344809038 or WhatsApp. Same-day service, 30-min response.',
+  title: 'Contact Us | Stoffel Appliance Care Madurai',
+  description: 'Contact Stoffel Appliance Care for home appliance repair in Madurai. Call 8838893560 or WhatsApp. Same-day service, 30-min response.',
 };
 
 const contactSchema = {
   '@context': 'https://schema.org',
   '@type': 'ContactPage',
-  name: 'Contact Appliance Service Experts',
+  name: 'Contact Stoffel Appliance Care',
   url: 'https://yourdomain.com/contact',
   mainEntity: {
     '@type': 'LocalBusiness',
-    name: 'Appliance Service Experts',
-    telephone: '+919344809038',
-    address: { '@type': 'PostalAddress', addressLocality: 'Tiruchirappalli', addressRegion: 'Tamil Nadu', addressCountry: 'IN' },
+    name: 'Stoffel Appliance Care',
+    telephone: '+918838893560',
+    address: { '@type': 'PostalAddress', addressLocality: 'Madurai', addressRegion: 'Tamil Nadu', addressCountry: 'IN' },
   },
 };
 
 const contactCards = [
-  { Icon: Phone, title: 'Phone', value: '93448 09038', href: 'tel:+919344809038', sub: 'Mon – Sun · 8 AM – 8 PM', color: '#2563eb' },
-  { Icon: MessageCircle, title: 'WhatsApp', value: 'Message Us', href: 'https://wa.me/919344809038', sub: 'Quick response guaranteed', color: '#25d366' },
-  { Icon: MapPin, title: 'Location', value: 'Tiruchirappalli, TN', href: undefined, sub: 'Doorstep service — we come to you', color: '#d97706' },
+  { Icon: Phone, title: 'Phone', value: '88388 93560', href: 'tel:+918838893560', sub: 'Mon – Sun · 8 AM – 8 PM', color: '#2563eb' },
+  { Icon: MessageCircle, title: 'WhatsApp', value: 'Message Us', href: 'https://web.whatsapp.com/send?phone=918778783255&text=', sub: 'Quick response guaranteed', color: '#25d366' },
+  { Icon: MapPin, title: 'Location', value: 'Madurai, TN', href: undefined, sub: 'Doorstep service — we come to you', color: '#d97706' },
   { Icon: Clock, title: 'Working Hours', value: '8 AM – 8 PM', href: undefined, sub: 'Monday to Sunday, all week', color: '#7c3aed' },
 ];
 
@@ -119,10 +119,10 @@ export default function ContactPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
-              <a href="tel:+919344809038" className="btn-secondary btn btn-lg flex-1 justify-center">
+              <a href="tel:+918838893560" className="btn-secondary btn btn-lg flex-1 justify-center">
                 <Phone className="w-5 h-5" /> Call Now
               </a>
-              <a href="https://wa.me/919344809038" target="_blank" rel="noopener noreferrer" className="btn-green btn btn-lg flex-1 justify-center">
+              <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer" className="btn-green btn btn-lg flex-1 justify-center">
                 <WhatsAppIcon className="w-5 h-5" /> WhatsApp
               </a>
             </div>

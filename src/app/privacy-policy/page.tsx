@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Appliance Service Experts',
+  title: 'Privacy Policy | Stoffel Appliance Care',
   description:
-    'Privacy Policy for Appliance Service Experts — how we collect, use, and protect your data. Third-party ad serving disclosure (Google AdSense).',
+    'Privacy Policy for Stoffel Appliance Care — how we collect, use, and protect your data. Third-party ad serving disclosure (Google AdSense).',
   robots: { index: false },
 };
 
@@ -18,9 +18,9 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Who We Are</h2>
           <p>
-            Appliance Service Experts ("we", "us", "our") operates the website at yourdomain.com.
-            We provide home appliance repair and service in Tiruchirappalli, Tamil Nadu, India.
-            Contact us at <a href="tel:+919344809038" className="text-brand-600 hover:underline">93448 09038</a>.
+            Stoffel Appliance Care ("we", "us", "our") operates the website at yourdomain.com.
+            We provide home appliance repair and service in Madurai, Tamil Nadu, India.
+            Contact us at <a href="tel:+918838893560" className="text-brand-600 hover:underline">88388 93560</a>.
           </p>
         </section>
 
@@ -94,7 +94,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-xl font-semibold text-gray-900 mb-3">7. Your Rights</h2>
           <p>
             You have the right to request access to, correction of, or deletion of any personal
-            data we hold about you. Contact us at <a href="tel:+919344809038" className="text-brand-600 hover:underline">93448 09038</a>.
+            data we hold about you. Contact us at <a href="tel:+918838893560" className="text-brand-600 hover:underline">88388 93560</a>.
           </p>
         </section>
 
@@ -118,11 +118,11 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-xl font-semibold text-gray-900 mb-3">10. Contact</h2>
           <p>
             For privacy-related queries, call us at{' '}
-            <a href="tel:+919344809038" className="text-brand-600 hover:underline font-semibold">
-              93448 09038
+            <a href="tel:+918838893560" className="text-brand-600 hover:underline font-semibold">
+              88388 93560
             </a>{' '}
             or WhatsApp{' '}
-            <a href="https://wa.me/919344809038" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+            <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
               here
             </a>.
           </p>

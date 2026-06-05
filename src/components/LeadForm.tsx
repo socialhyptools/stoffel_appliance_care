@@ -44,7 +44,7 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
           subject: `New Lead: ${data.get('service') || 'Repair'} — ${data.get('name')}`,
-          from_name: 'Appliance Service Experts Website',
+          from_name: 'Stoffel Appliance Care Website',
           name: data.get('name'),
           phone: data.get('phone'),
           service: data.get('service'),
@@ -143,7 +143,7 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
       {status === 'error' && (
         <div className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
           Something went wrong. Call us at{' '}
-          <a href="tel:+919344809038" className="font-semibold underline">93448 09038</a>.
+          <a href="tel:+918838893560" className="font-semibold underline">88388 93560</a>.
         </div>
       )}
 

@@ -5,6 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import CookieConsent from '@/components/CookieConsent';
 import WhatsAppFloat from '@/components/WhatsAppFloat';
+import CallFloat from '@/components/CallFloat';
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -15,33 +16,33 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://yourdomain.com'),
   title: {
-    default: 'Appliance Service Experts | Home Appliance Repair Trichy',
-    template: '%s | Appliance Service Experts',
+    default: 'Stoffel Appliance Care | Home Appliance Repair Madurai',
+    template: '%s | Stoffel Appliance Care',
   },
   description:
-    'Expert doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Trichy. 30-min response · 90-day warranty · ₹399 inspection. Call 9344809038.',
+    'Expert doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Madurai. 30-min response · 90-day warranty · ₹249 inspection. Call 8838893560.',
   keywords: [
-    'home appliance repair Trichy',
-    'AC service Trichy',
-    'washing machine repair Trichy',
-    'refrigerator repair Trichy',
-    'TV repair Trichy',
-    'microwave repair Trichy',
+    'home appliance repair Madurai',
+    'AC service Madurai',
+    'washing machine repair Madurai',
+    'refrigerator repair Madurai',
+    'TV repair Madurai',
+    'microwave repair Madurai',
     'doorstep appliance service',
   ],
-  authors: [{ name: 'Appliance Service Experts' }],
+  authors: [{ name: 'Stoffel Appliance Care' }],
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    siteName: 'Appliance Service Experts',
-    title: 'Appliance Service Experts | Home Appliance Repair Trichy',
+    siteName: 'Stoffel Appliance Care',
+    title: 'Stoffel Appliance Care | Home Appliance Repair Madurai',
     description:
-      'Expert doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Trichy.',
+      'Expert doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Madurai.',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Appliance Service Experts',
-    description: 'Expert doorstep appliance repair in Trichy. Call 9344809038.',
+    title: 'Stoffel Appliance Care',
+    description: 'Expert doorstep appliance repair in Madurai. Call 8838893560.',
   },
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://yourdomain.com' },
@@ -50,22 +51,24 @@ export const metadata: Metadata = {
 const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Appliance Service Experts',
-  alternateName: 'Home Appliance Trichy',
+  name: 'Stoffel Appliance Care',
+  alternateName: 'Home Appliance Madurai',
   description:
-    'Professional home appliance repair and installation service in Trichy — AC, Washing Machine, Refrigerator, TV, Microwave.',
+    'Professional home appliance repair and installation service in Madurai — AC, Washing Machine, Refrigerator, TV, Microwave.',
   url: 'https://yourdomain.com',
-  telephone: '+919344809038',
+  telephone: '+918838893560',
   priceRange: '₹₹',
   currenciesAccepted: 'INR',
   paymentAccepted: 'Cash, UPI',
   areaServed: {
     '@type': 'City',
-    name: 'Tiruchirappalli',
+    name: 'Madurai',
   },
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Tiruchirappalli',
+    streetAddress: '110/4, Keelavaithiyanatha Puram',
+    addressLocality: 'Madurai',
+    postalCode: '625018',
     addressRegion: 'Tamil Nadu',
     addressCountry: 'IN',
   },
@@ -112,6 +115,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <CallFloat />
         <WhatsAppFloat />
         <CookieConsent />
       </body>

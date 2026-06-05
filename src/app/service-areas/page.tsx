@@ -5,8 +5,8 @@ import AdUnit from '@/components/AdUnit';
 import { AcIcon, WashingMachineIcon, RefrigeratorIcon, TvIcon, MicrowaveIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Service Areas in Trichy | Appliance Service Experts',
-  description: 'Appliance Service Experts covers 50+ locations in Trichy — Thillai Nagar, KK Nagar, Srirangam, Woraiyur, Anna Nagar & more. Call 9344809038.',
+  title: 'Service Areas in Madurai | Stoffel Appliance Care',
+  description: 'Stoffel Appliance Care covers 50+ locations in Madurai — Thillai Nagar, KK Nagar, Srirangam, Woraiyur, Anna Nagar & more. Call 8838893560.',
 };
 
 const areas = [
@@ -26,8 +26,8 @@ const areas = [
 const schema = {
   '@context': 'https://schema.org', '@type': 'Service',
   name: 'Home Appliance Repair Service Areas',
-  provider: { '@type': 'LocalBusiness', name: 'Appliance Service Experts', telephone: '+919344809038' },
-  areaServed: areas.map((a) => ({ '@type': 'Place', name: `${a}, Tiruchirappalli` })),
+  provider: { '@type': 'LocalBusiness', name: 'Stoffel Appliance Care', telephone: '+918838893560' },
+  areaServed: areas.map((a) => ({ '@type': 'Place', name: `${a}, Madurai` })),
 };
 
 const serviceLinks = [
@@ -51,10 +51,10 @@ export default function ServiceAreasPage() {
               50+ Locations Covered
             </span>
             <h1 className="text-white font-extrabold mb-5" style={{ fontSize: 'clamp(2.2rem,5vw,3.5rem)' }}>
-              Serving All of<br /><span className="text-gradient-blue">Tiruchirappalli</span>
+              Serving All of<br /><span className="text-gradient-blue">Madurai</span>
             </h1>
             <p className="text-blue-200 text-lg leading-relaxed">
-              Fast doorstep appliance repair wherever you are in Trichy. 30-minute response, 50+ areas covered.
+              Fast doorstep appliance repair wherever you are in Madurai. 30-minute response, 50+ areas covered.
             </p>
           </div>
         </div>
@@ -93,9 +93,9 @@ export default function ServiceAreasPage() {
           </div>
           <div className="flex-1 text-center sm:text-left">
             <h3 className="font-bold text-brand-900 mb-1">Don&apos;t see your area?</h3>
-            <p className="text-brand-700 text-sm">Call us at <a href="tel:+919344809038" className="font-bold hover:underline">93448 09038</a> — we may still be able to send a technician.</p>
+            <p className="text-brand-700 text-sm">Call us at <a href="tel:+918838893560" className="font-bold hover:underline">88388 93560</a> — we may still be able to send a technician.</p>
           </div>
-          <a href="tel:+919344809038" className="btn-primary btn flex-shrink-0">
+          <a href="tel:+918838893560" className="btn-primary btn flex-shrink-0">
             <Phone className="w-4 h-4" /> Call Us
           </a>
         </div>
@@ -122,9 +122,9 @@ export default function ServiceAreasPage() {
       <section className="py-16 relative overflow-hidden" style={{ background: 'linear-gradient(135deg,#0c1428 0%,#1e3a8a 100%)' }}>
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-white text-4xl font-extrabold mb-4">Ready to Book?</h2>
-          <p className="text-blue-200 text-lg mb-8">30-minute response guaranteed across all Trichy locations.</p>
-          <a href="tel:+919344809038" className="btn-secondary btn btn-lg">
-            <Phone className="w-5 h-5" /> Call 93448 09038
+          <p className="text-blue-200 text-lg mb-8">30-minute response guaranteed across all Madurai locations.</p>
+          <a href="tel:+918838893560" className="btn-secondary btn btn-lg">
+            <Phone className="w-5 h-5" /> Call 88388 93560
           </a>
         </div>
       </section>

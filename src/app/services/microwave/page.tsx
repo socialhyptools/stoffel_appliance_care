@@ -3,9 +3,9 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 import { MicrowaveIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Microwave Oven Repair in Trichy | All Brands',
+  title: 'Microwave Oven Repair in Madurai | All Brands',
   description:
-    'Microwave oven repair in Trichy — heating failure, magnetron, turntable, door faults. Samsung, LG, IFB, Panasonic. 90-day warranty. Call 9344809038.',
+    'Microwave oven repair in Madurai — heating failure, magnetron, turntable, door faults. Samsung, LG, IFB, Panasonic. 90-day warranty. Call 8838893560.',
   alternates: { canonical: 'https://yourdomain.com/services/microwave' },
 };
 
@@ -16,17 +16,17 @@ const schema = {
   serviceType: 'Microwave Repair',
   provider: {
     '@type': 'LocalBusiness',
-    name: 'Appliance Service Experts',
-    telephone: '+919344809038',
+    name: 'Stoffel Appliance Care',
+    telephone: '+918838893560',
   },
-  areaServed: { '@type': 'City', name: 'Tiruchirappalli' },
+  areaServed: { '@type': 'City', name: 'Madurai' },
 };
 
 export default function MicrowavePage() {
   return (
     <ServicePageTemplate
       icon={<MicrowaveIcon className="w-14 h-14" />}
-      title="Microwave Oven Repair in Trichy"
+      title="Microwave Oven Repair in Madurai"
       tagline="Solo, grill & convection microwave repairs — heating issues, magnetron, turntable & control faults fixed fast."
       description="We repair all types of microwave ovens including solo, grill, and convection models. Our technicians diagnose heating failures, magnetron faults, turntable motor issues, door latch problems, and control panel malfunctions. We use genuine spare parts and our repairs are backed by a comprehensive warranty. Most microwave repairs are completed in a single visit at your doorstep."
       problems={[
