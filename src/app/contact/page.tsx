@@ -73,7 +73,7 @@ export default function ContactPage() {
           <div className="space-y-5">
             <div className="rounded-2xl overflow-hidden shadow-card mb-2">
               <img
-                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80"
+                src="/images/contact-support.jpg"
                 alt="Customer support team ready to help"
                 className="w-full h-52 object-cover"
                 loading="lazy"

@@ -72,7 +72,7 @@ export default function ServiceAreasPage() {
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="rounded-2xl overflow-hidden shadow-card mb-12">
           <img
-            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80"
+            src="/images/city-map.jpg"
             alt="Madurai city aerial view - service coverage area"
             className="w-full h-56 object-cover"
             loading="lazy"

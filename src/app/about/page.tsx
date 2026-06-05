@@ -72,7 +72,7 @@ export default function AboutPage() {
           <div className="space-y-6">
             <div className="rounded-2xl overflow-hidden shadow-card">
               <img
-                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80"
+                src="/images/technician.jpg"
                 alt="Professional appliance repair technician at work"
                 className="w-full h-64 object-cover"
                 loading="lazy"

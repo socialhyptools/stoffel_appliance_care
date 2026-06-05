@@ -47,7 +47,7 @@ export default function TelevisionPage() {
       schema={schema}
       adSlot1="1011121314"
       adSlot2="1112131415"
-      heroImage="https://images.unsplash.com/photo-1593784991095-a205069470b6?w=800&q=80"
+      heroImage="/images/television.jpg"
     />
   );
 }

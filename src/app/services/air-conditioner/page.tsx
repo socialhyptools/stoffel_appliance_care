@@ -49,7 +49,7 @@ export default function ACPage() {
       schema={schema}
       adSlot1="4455667788"
       adSlot2="5566778899"
-      heroImage="https://images.unsplash.com/photo-1631545806609-3d97bfea1f89?w=800&q=80"
+      heroImage="/images/ac-repair.jpg"
     />
   );
 }

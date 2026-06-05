@@ -47,7 +47,7 @@ export default function RefrigeratorPage() {
       schema={schema}
       adSlot1="8899001122"
       adSlot2="9900112233"
-      heroImage="https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=800&q=80"
+      heroImage="/images/refrigerator.jpg"
     />
   );
 }

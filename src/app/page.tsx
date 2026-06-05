@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { icon: <AcIcon className="w-8 h-8" />, title: 'AC Repair & Service', desc: 'Gas refill, deep clean, compressor repair. All split, window & cassette AC brands.', href: '/services/air-conditioner', color: '#2563eb', image: 'https://images.unsplash.com/photo-1631545806609-3d97bfea1f89?w=600&q=75' },
-  { icon: <WashingMachineIcon className="w-8 h-8" />, title: 'Washing Machine', desc: 'Front-load, top-load — drum, motor, drainage, PCB faults fixed same day.', href: '/services/washing-machine', color: '#7c3aed', image: 'https://images.unsplash.com/photo-1626806787461-102c1a7f1b62?w=600&q=75' },
-  { icon: <RefrigeratorIcon className="w-8 h-8" />, title: 'Refrigerator', desc: 'Cooling failure, compressor, gas charging, door seal — all brands covered.', href: '/services/refrigerator', color: '#0891b2', image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&q=75' },
-  { icon: <TvIcon className="w-8 h-8" />, title: 'Television', desc: 'LED, LCD, Smart TV — panel, board, sound and display issues repaired.', href: '/services/television', color: '#be123c', image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&q=75' },
-  { icon: <MicrowaveIcon className="w-8 h-8" />, title: 'Microwave / Oven', desc: 'Heating failure, magnetron, turntable, control panel issues fixed at doorstep.', href: '/services/microwave', color: '#d97706', image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600&q=75' },
+  { icon: <AcIcon className="w-8 h-8" />, title: 'AC Repair & Service', desc: 'Gas refill, deep clean, compressor repair. All split, window & cassette AC brands.', href: '/services/air-conditioner', color: '#2563eb', image: '/images/ac-repair.jpg' },
+  { icon: <WashingMachineIcon className="w-8 h-8" />, title: 'Washing Machine', desc: 'Front-load, top-load — drum, motor, drainage, PCB faults fixed same day.', href: '/services/washing-machine', color: '#7c3aed', image: '/images/washing-machine.jpg' },
+  { icon: <RefrigeratorIcon className="w-8 h-8" />, title: 'Refrigerator', desc: 'Cooling failure, compressor, gas charging, door seal — all brands covered.', href: '/services/refrigerator', color: '#0891b2', image: '/images/refrigerator.jpg' },
+  { icon: <TvIcon className="w-8 h-8" />, title: 'Television', desc: 'LED, LCD, Smart TV — panel, board, sound and display issues repaired.', href: '/services/television', color: '#be123c', image: '/images/television.jpg' },
+  { icon: <MicrowaveIcon className="w-8 h-8" />, title: 'Microwave / Oven', desc: 'Heating failure, magnetron, turntable, control panel issues fixed at doorstep.', href: '/services/microwave', color: '#d97706', image: '/images/microwave.jpg' },
 ];
 
 const stats = [

@@ -10,6 +10,7 @@ interface AdUnitProps {
 
 // Replace ca-pub-XXXXXXXXXXXXXXXX with your Google AdSense Publisher ID
 const PUBLISHER_ID = 'ca-pub-XXXXXXXXXXXXXXXX';
+const IS_ADSENSE_CONFIGURED = !PUBLISHER_ID.includes('XXXX');
 
 export default function AdUnit({
   slot,
@@ -30,6 +31,8 @@ export default function AdUnit({
       // AdSense not loaded yet
     }
   }, []);
+
+  if (!IS_ADSENSE_CONFIGURED) return null;
 
   return (
     /* Viewable placement: full width, natural flow, not hidden */

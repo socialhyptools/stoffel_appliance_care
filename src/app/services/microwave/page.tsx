@@ -47,7 +47,7 @@ export default function MicrowavePage() {
       schema={schema}
       adSlot1="1516171819"
       adSlot2="1617181920"
-      heroImage="https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=800&q=80"
+      heroImage="/images/microwave.jpg"
     />
   );
 }
