@@ -2,9 +2,10 @@
 import { useState } from 'react';
 import { User, Phone, Wrench, Send } from 'lucide-react';
 
-// To activate form emails: go to https://web3forms.com, enter srvservice174@gmail.com, copy the access key below
-const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+// Formsubmit.co — no signup needed. First submission triggers a one-time
+// verification email to this address. Click the link in that email once, done.
 const RECIPIENT_EMAIL = 'srvservice174@gmail.com';
+const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`;
 
 const services = [
   'AC Repair & Service',
@@ -40,25 +41,22 @@ export default function LeadForm({ compact = false, defaultService = '' }: { com
     setErrors({});
     setStatus('loading');
     try {
-      const res = await fetch('https://api.web3forms.com/submit', {
+      const res = await fetch(FORMSUBMIT_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `New Booking: ${data.get('service') || 'Repair'} — ${data.get('name')}`,
-          from_name: 'Stoffel Appliance Care Website',
-          replyto: RECIPIENT_EMAIL,
-          to: RECIPIENT_EMAIL,
           name: data.get('name'),
           phone: data.get('phone'),
-          service: data.get('service'),
+          service: data.get('service') || 'Not specified',
           message: data.get('message') || '—',
-          botcheck: '',
+          _subject: `New Booking: ${data.get('service') || 'Repair'} — ${data.get('name')}`,
+          _template: 'table',
+          _captcha: 'false',
         }),
       });
       const json = await res.json();
-      setStatus(json.success ? 'success' : 'error');
-      if (json.success) form.reset();
+      setStatus(json.success === 'true' || json.success === true ? 'success' : 'error');
+      if (json.success === 'true' || json.success === true) form.reset();
     } catch { setStatus('error'); }
   }
 
@@ -134,19 +132,18 @@ export default function LeadForm({ compact = false, defaultService = '' }: { com
       {/* Message — hidden in compact mode */}
       {!compact && (
         <div>
-          <label htmlFor="lead-message" className="form-label">Problem Description <span className="text-gray-400 font-normal">(optional)</span></label>
+          <label htmlFor="lead-message" className="form-label">
+            Problem Description <span className="text-gray-400 font-normal">(optional)</span>
+          </label>
           <textarea id="lead-message" name="message" rows={3}
             placeholder="Describe the issue, e.g. AC not cooling, machine making noise…"
             className="form-input resize-none" />
         </div>
       )}
 
-      {/* Honeypot */}
-      <input type="checkbox" name="botcheck" className="hidden" tabIndex={-1} aria-hidden="true" />
-
       {status === 'error' && (
         <div className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
-          Something went wrong. Call us at{' '}
+          Something went wrong. Please call us at{' '}
           <a href="tel:+918838893560" className="font-semibold underline">88388 93560</a>.
         </div>
       )}
