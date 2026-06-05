@@ -1,11 +1,21 @@
 'use client';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { User, Phone, Wrench, Send } from 'lucide-react';
 
-// Formsubmit.co — no signup needed. First submission triggers a one-time
-// verification email to this address. Click the link in that email once, done.
-const RECIPIENT_EMAIL = 'srvservice174@gmail.com';
-const FORMSUBMIT_URL = `https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`;
+// ─── EmailJS config ────────────────────────────────────────────────────────
+// 1. Go to https://emailjs.com → Sign Up free
+// 2. Email Services → Add New Service → Gmail → connect srvservice174@gmail.com
+//    → copy the Service ID below
+// 3. Email Templates → Create Template (use variables: {{name}}, {{phone}},
+//    {{service}}, {{message}}) → copy the Template ID below
+// 4. Account → General → Public Key → copy below
+const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
+const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
+const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+// ───────────────────────────────────────────────────────────────────────────
+
+const IS_CONFIGURED = !EMAILJS_SERVICE_ID.includes('YOUR_');
 
 const services = [
   'AC Repair & Service',
@@ -40,27 +50,31 @@ export default function LeadForm({ compact = false, defaultService = '' }: { com
     if (Object.keys(errs).length) { setErrors(errs); return; }
     setErrors({});
     setStatus('loading');
-    try {
-      const formData = new FormData();
-      formData.append('name', (data.get('name') as string) || '');
-      formData.append('phone', (data.get('phone') as string) || '');
-      formData.append('service', (data.get('service') as string) || 'Not specified');
-      formData.append('message', (data.get('message') as string) || '—');
-      formData.append('_subject', `New Booking: ${data.get('service') || 'Repair'} — ${data.get('name')}`);
-      formData.append('_template', 'table');
-      formData.append('_captcha', 'false');
-      formData.append('_next', 'https://stoffelappliancecare.in');
 
-      const res = await fetch(FORMSUBMIT_URL, {
-        method: 'POST',
-        headers: { Accept: 'application/json' },
-        body: formData,
-      });
-      const json = await res.json();
-      const ok = json.success === 'true' || json.success === true;
-      setStatus(ok ? 'success' : 'error');
-      if (ok) form.reset();
-    } catch { setStatus('error'); }
+    if (!IS_CONFIGURED) {
+      // EmailJS not set up yet — simulate success for UI testing
+      setTimeout(() => setStatus('error'), 800);
+      return;
+    }
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name:    (data.get('name')    as string) || '',
+          phone:   (data.get('phone')   as string) || '',
+          service: (data.get('service') as string) || 'Not specified',
+          message: (data.get('message') as string) || '—',
+          to_email: 'srvservice174@gmail.com',
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+      setStatus('success');
+      form.reset();
+    } catch {
+      setStatus('error');
+    }
   }
 
   if (status === 'success') {
@@ -145,10 +159,9 @@ export default function LeadForm({ compact = false, defaultService = '' }: { com
       )}
 
       {status === 'error' && (
-        <div className="text-sm bg-red-50 border border-red-200 rounded-xl px-4 py-3 space-y-1">
-          <p className="font-semibold text-red-700">Form not activated yet.</p>
-          <p className="text-red-600">Check <strong>srvservice174@gmail.com</strong> for a verification email from Formsubmit and click the confirmation link. Then try again.</p>
-          <p className="text-red-500">Or call us directly: <a href="tel:+918838893560" className="font-semibold underline">88388 93560</a></p>
+        <div className="text-sm text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-3">
+          Something went wrong. Please call us at{' '}
+          <a href="tel:+918838893560" className="font-semibold underline">88388 93560</a>.
         </div>
       )}
 
