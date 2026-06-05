@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Phone, MessageCircle, MapPin, Clock } from 'lucide-react';
+import { Phone, MessageCircle, MapPin, Clock, Mail } from 'lucide-react';
 import AdUnit from '@/components/AdUnit';
 import LeadForm from '@/components/LeadForm';
 import { WhatsAppIcon } from '@/components/Icons';
@@ -25,6 +25,7 @@ const contactSchema = {
 const contactCards = [
   { Icon: Phone, title: 'Phone', value: '88388 93560', href: 'tel:+918838893560', sub: 'Mon – Sun · 8 AM – 8 PM', color: '#2563eb' },
   { Icon: MessageCircle, title: 'WhatsApp', value: 'Message Us', href: 'https://web.whatsapp.com/send?phone=918778783255&text=', sub: 'Quick response guaranteed', color: '#25d366' },
+  { Icon: Mail, title: 'Email', value: 'srvservice174@gmail.com', href: 'mailto:srvservice174@gmail.com', sub: 'We reply within a few hours', color: '#ea4335' },
   { Icon: MapPin, title: 'Location', value: 'Madurai, TN', href: undefined, sub: 'Doorstep service — we come to you', color: '#d97706' },
   { Icon: Clock, title: 'Working Hours', value: '8 AM – 8 PM', href: undefined, sub: 'Monday to Sunday, all week', color: '#7c3aed' },
 ];

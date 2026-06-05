@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Phone, MapPin, Clock } from 'lucide-react';
+import { Phone, MapPin, Clock, Mail } from 'lucide-react';
 import { WhatsAppIcon } from '@/components/Icons';
 
 const services = [
@@ -88,6 +88,7 @@ export default function Footer() {
                   </span>
                 </p>
                 <p><a href="tel:+918838893560" className="flex items-center gap-2 hover:text-white transition-colors"><Phone className="w-4 h-4 flex-shrink-0" /> 88388 93560</a></p>
+                <p><a href="mailto:srvservice174@gmail.com" className="flex items-center gap-2 hover:text-white transition-colors"><Mail className="w-4 h-4 flex-shrink-0" /> srvservice174@gmail.com</a></p>
                 <p className="flex items-center gap-2"><Clock className="w-4 h-4 flex-shrink-0" /> Mon – Sun · 8:00 AM – 8:00 PM</p>
               </address>
               <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer"

@@ -2,7 +2,9 @@
 import { useState } from 'react';
 import { User, Phone, Wrench, Send } from 'lucide-react';
 
+// To activate form emails: go to https://web3forms.com, enter srvservice174@gmail.com, copy the access key below
 const WEB3FORMS_ACCESS_KEY = 'YOUR_WEB3FORMS_ACCESS_KEY';
+const RECIPIENT_EMAIL = 'srvservice174@gmail.com';
 
 const services = [
   'AC Repair & Service',
@@ -15,7 +17,7 @@ const services = [
 
 type Status = 'idle' | 'loading' | 'success' | 'error';
 
-export default function LeadForm({ compact = false }: { compact?: boolean }) {
+export default function LeadForm({ compact = false, defaultService = '' }: { compact?: boolean; defaultService?: string }) {
   const [status, setStatus] = useState<Status>('idle');
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -43,8 +45,10 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
           access_key: WEB3FORMS_ACCESS_KEY,
-          subject: `New Lead: ${data.get('service') || 'Repair'} — ${data.get('name')}`,
+          subject: `New Booking: ${data.get('service') || 'Repair'} — ${data.get('name')}`,
           from_name: 'Stoffel Appliance Care Website',
+          replyto: RECIPIENT_EMAIL,
+          to: RECIPIENT_EMAIL,
           name: data.get('name'),
           phone: data.get('phone'),
           service: data.get('service'),
@@ -120,7 +124,7 @@ export default function LeadForm({ compact = false }: { compact?: boolean }) {
           <span className="absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400">
             <Wrench className="w-4 h-4" />
           </span>
-          <select id="lead-service" name="service" className="form-select pl-10">
+          <select id="lead-service" name="service" className="form-select pl-10" defaultValue={defaultService}>
             <option value="">Select appliance…</option>
             {services.map((s) => <option key={s} value={s}>{s}</option>)}
           </select>
