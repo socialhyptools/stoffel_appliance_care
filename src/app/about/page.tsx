@@ -69,17 +69,29 @@ export default function AboutPage() {
             <Link href="/contact" className="btn-secondary btn btn-lg">Get in Touch →</Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map((s) => (
-              <div
-                key={s.label}
-                className="rounded-2xl p-6 text-center border border-gray-100 shadow-soft hover:shadow-card transition-all duration-300"
-                style={{ background: 'linear-gradient(135deg,#f8faff 0%,#fff 100%)' }}
-              >
-                <div className="text-4xl font-black text-brand-700 mb-1">{s.value}</div>
-                <div className="text-sm text-gray-500 font-medium">{s.label}</div>
-              </div>
-            ))}
+          <div className="space-y-6">
+            <div className="rounded-2xl overflow-hidden shadow-card">
+              <img
+                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&q=80"
+                alt="Professional appliance repair technician at work"
+                className="w-full h-64 object-cover"
+                loading="lazy"
+                width="800"
+                height="256"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map((s) => (
+                <div
+                  key={s.label}
+                  className="rounded-2xl p-6 text-center border border-gray-100 shadow-soft hover:shadow-card transition-all duration-300"
+                  style={{ background: 'linear-gradient(135deg,#f8faff 0%,#fff 100%)' }}
+                >
+                  <div className="text-4xl font-black text-brand-700 mb-1">{s.value}</div>
+                  <div className="text-sm text-gray-500 font-medium">{s.label}</div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -71,6 +71,16 @@ export default function ContactPage() {
           </div>
 
           <div className="space-y-5">
+            <div className="rounded-2xl overflow-hidden shadow-card mb-2">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?w=800&q=80"
+                alt="Customer support team ready to help"
+                className="w-full h-52 object-cover"
+                loading="lazy"
+                width="800"
+                height="208"
+              />
+            </div>
             <h2 className="text-2xl font-extrabold text-gray-900 mb-6">Other Ways to Reach Us</h2>
             {contactCards.map((c) => (
               <div key={c.title} className="bg-white rounded-2xl p-5 shadow-soft hover:shadow-card border border-gray-100 hover:border-gray-200 transition-all duration-200 flex items-center gap-4">

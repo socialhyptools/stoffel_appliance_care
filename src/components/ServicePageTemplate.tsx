@@ -16,11 +16,12 @@ interface ServiceProps {
   adSlot1: string;
   adSlot2: string;
   accentColor?: string;
+  heroImage?: string;
 }
 
 export default function ServicePageTemplate({
   title, icon, tagline, description, problems, brands,
-  schema, adSlot1, adSlot2, accentColor = '#2563eb',
+  schema, adSlot1, adSlot2, accentColor = '#2563eb', heroImage,
 }: ServiceProps) {
   return (
     <>
@@ -98,6 +99,18 @@ export default function ServicePageTemplate({
             <div>
               <span className="badge mb-4">About This Service</span>
               <h2 className="text-2xl font-extrabold text-gray-900 mb-4">What&apos;s Included</h2>
+              {heroImage && (
+                <div className="rounded-2xl overflow-hidden mb-6 shadow-card">
+                  <img
+                    src={heroImage}
+                    alt={title}
+                    className="w-full h-64 object-cover"
+                    loading="lazy"
+                    width="800"
+                    height="256"
+                  />
+                </div>
+              )}
               <p className="text-gray-600 leading-relaxed text-base">{description}</p>
             </div>
 

@@ -18,11 +18,11 @@ export const metadata: Metadata = {
 };
 
 const services = [
-  { icon: <AcIcon className="w-8 h-8" />, title: 'AC Repair & Service', desc: 'Gas refill, deep clean, compressor repair. All split, window & cassette AC brands.', href: '/services/air-conditioner', color: '#2563eb' },
-  { icon: <WashingMachineIcon className="w-8 h-8" />, title: 'Washing Machine', desc: 'Front-load, top-load — drum, motor, drainage, PCB faults fixed same day.', href: '/services/washing-machine', color: '#7c3aed' },
-  { icon: <RefrigeratorIcon className="w-8 h-8" />, title: 'Refrigerator', desc: 'Cooling failure, compressor, gas charging, door seal — all brands covered.', href: '/services/refrigerator', color: '#0891b2' },
-  { icon: <TvIcon className="w-8 h-8" />, title: 'Television', desc: 'LED, LCD, Smart TV — panel, board, sound and display issues repaired.', href: '/services/television', color: '#be123c' },
-  { icon: <MicrowaveIcon className="w-8 h-8" />, title: 'Microwave / Oven', desc: 'Heating failure, magnetron, turntable, control panel issues fixed at doorstep.', href: '/services/microwave', color: '#d97706' },
+  { icon: <AcIcon className="w-8 h-8" />, title: 'AC Repair & Service', desc: 'Gas refill, deep clean, compressor repair. All split, window & cassette AC brands.', href: '/services/air-conditioner', color: '#2563eb', image: 'https://images.unsplash.com/photo-1631545806609-3d97bfea1f89?w=600&q=75' },
+  { icon: <WashingMachineIcon className="w-8 h-8" />, title: 'Washing Machine', desc: 'Front-load, top-load — drum, motor, drainage, PCB faults fixed same day.', href: '/services/washing-machine', color: '#7c3aed', image: 'https://images.unsplash.com/photo-1626806787461-102c1a7f1b62?w=600&q=75' },
+  { icon: <RefrigeratorIcon className="w-8 h-8" />, title: 'Refrigerator', desc: 'Cooling failure, compressor, gas charging, door seal — all brands covered.', href: '/services/refrigerator', color: '#0891b2', image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600&q=75' },
+  { icon: <TvIcon className="w-8 h-8" />, title: 'Television', desc: 'LED, LCD, Smart TV — panel, board, sound and display issues repaired.', href: '/services/television', color: '#be123c', image: 'https://images.unsplash.com/photo-1593784991095-a205069470b6?w=600&q=75' },
+  { icon: <MicrowaveIcon className="w-8 h-8" />, title: 'Microwave / Oven', desc: 'Heating failure, magnetron, turntable, control panel issues fixed at doorstep.', href: '/services/microwave', color: '#d97706', image: 'https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=600&q=75' },
 ];
 
 const stats = [
@@ -176,17 +176,30 @@ export default function HomePage() {
             {services.map((s) => (
               <Link key={s.href} href={s.href}
                 className="group bg-white rounded-2xl shadow-card hover:shadow-card-hover hover:-translate-y-2
-                           border border-gray-100 hover:border-brand-200 p-7 transition-all duration-300 cursor-pointer">
-                <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-transform duration-300 group-hover:scale-110"
-                  style={{ background: `linear-gradient(135deg,${s.color}22 0%,${s.color}11 100%)`, border: `1.5px solid ${s.color}30`, color: s.color }}>
-                  {s.icon}
+                           border border-gray-100 hover:border-brand-200 overflow-hidden transition-all duration-300 cursor-pointer">
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={s.image}
+                    alt={s.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    loading="lazy"
+                    width="600"
+                    height="176"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <div className="absolute bottom-3 left-3 w-12 h-12 rounded-xl flex items-center justify-center bg-white/90 backdrop-blur-sm"
+                    style={{ color: s.color }}>
+                    {s.icon}
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-700 transition-colors">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-5">{s.desc}</p>
-                <span className="inline-flex items-center gap-1.5 text-brand-600 text-sm font-semibold group-hover:gap-2.5 transition-all duration-200">
-                  Learn more
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7"/></svg>
-                </span>
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-brand-700 transition-colors">{s.title}</h3>
+                  <p className="text-gray-500 text-sm leading-relaxed mb-4">{s.desc}</p>
+                  <span className="inline-flex items-center gap-1.5 text-brand-600 text-sm font-semibold group-hover:gap-2.5 transition-all duration-200">
+                    Learn more
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7"/></svg>
+                  </span>
+                </div>
               </Link>
             ))}
 

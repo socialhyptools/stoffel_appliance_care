@@ -70,6 +70,16 @@ export default function ServiceAreasPage() {
       </div>
 
       <section className="py-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="rounded-2xl overflow-hidden shadow-card mb-12">
+          <img
+            src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80"
+            alt="Madurai city aerial view - service coverage area"
+            className="w-full h-56 object-cover"
+            loading="lazy"
+            width="1200"
+            height="224"
+          />
+        </div>
         <div className="text-center mb-10">
           <span className="badge mb-4">Service Coverage</span>
           <h2 className="text-3xl font-extrabold text-gray-900 mb-3">Areas We Cover</h2>

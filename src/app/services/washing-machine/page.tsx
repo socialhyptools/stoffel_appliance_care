@@ -47,6 +47,7 @@ export default function WashingMachinePage() {
       schema={schema}
       adSlot1="6677889900"
       adSlot2="7788990011"
+      heroImage="https://images.unsplash.com/photo-1626806787461-102c1a7f1b62?w=800&q=80"
     />
   );
 }
