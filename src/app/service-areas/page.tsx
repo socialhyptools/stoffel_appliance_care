@@ -89,9 +89,9 @@ export default function ServiceAreasPage() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3">
           {areas.map((area) => (
             <div key={area}
-              className="group bg-white border border-gray-100 rounded-xl px-3 py-3.5 text-sm font-medium text-gray-700 text-center hover:border-brand-300 hover:text-brand-700 hover:bg-brand-50 hover:shadow-soft transition-all duration-200 cursor-default flex items-center justify-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-400 group-hover:bg-accent-500 transition-colors flex-shrink-0" />
-              {area}
+              className="group bg-white border border-gray-100 rounded-xl px-4 py-3.5 text-sm font-medium text-gray-700 hover:border-brand-300 hover:text-brand-700 hover:bg-brand-50 hover:shadow-soft transition-all duration-200 cursor-default flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-brand-400 group-hover:bg-accent-500 transition-colors flex-shrink-0" />
+              <span className="leading-snug">{area}</span>
             </div>
           ))}
         </div>
