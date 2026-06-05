@@ -1,15 +1,12 @@
 'use client';
 import { useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { User, Phone, Wrench, Send } from 'lucide-react';
 
 // ─── EmailJS config ────────────────────────────────────────────────────────
-// 1. Go to https://emailjs.com → Sign Up free
-// 2. Email Services → Add New Service → Gmail → connect srvservice174@gmail.com
-//    → copy the Service ID below
-// 3. Email Templates → Create Template (use variables: {{name}}, {{phone}},
-//    {{service}}, {{message}}) → copy the Template ID below
-// 4. Account → General → Public Key → copy below
+// Fill these in after setting up EmailJS (emailjs.com — free):
+// 1. Email Services → Add Gmail → copy Service ID
+// 2. Email Templates → Create template → copy Template ID
+// 3. Account → General → copy Public Key
 const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
 const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
 const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
@@ -52,26 +49,34 @@ export default function LeadForm({ compact = false, defaultService = '' }: { com
     setStatus('loading');
 
     if (!IS_CONFIGURED) {
-      // EmailJS not set up yet — simulate success for UI testing
-      setTimeout(() => setStatus('error'), 800);
+      setStatus('error');
       return;
     }
 
     try {
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          name:    (data.get('name')    as string) || '',
-          phone:   (data.get('phone')   as string) || '',
-          service: (data.get('service') as string) || 'Not specified',
-          message: (data.get('message') as string) || '—',
-          to_email: 'srvservice174@gmail.com',
-        },
-        EMAILJS_PUBLIC_KEY
-      );
-      setStatus('success');
-      form.reset();
+      // EmailJS REST API — no npm package needed
+      const res = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          service_id: EMAILJS_SERVICE_ID,
+          template_id: EMAILJS_TEMPLATE_ID,
+          user_id: EMAILJS_PUBLIC_KEY,
+          template_params: {
+            name:    (data.get('name')    as string) || '',
+            phone:   (data.get('phone')   as string) || '',
+            service: (data.get('service') as string) || 'Not specified',
+            message: (data.get('message') as string) || '—',
+            to_email: 'srvservice174@gmail.com',
+          },
+        }),
+      });
+      if (res.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
     } catch {
       setStatus('error');
     }
