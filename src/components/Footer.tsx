@@ -35,7 +35,7 @@ export default function Footer() {
                 <img src="/logo.png" alt="Stoffel Appliance Care" className="w-14 h-14 rounded-xl object-contain" />
                 <div>
                   <div className="text-white font-extrabold text-sm tracking-tight">Stoffel Appliance Care</div>
-                  <div className="text-blue-400 text-[11px] font-medium">Madurai, Tamil Nadu</div>
+                  <div className="text-blue-400 text-[11px] font-medium">Tiruchirappalli, Tamil Nadu</div>
                 </div>
               </div>
               <p className="text-sm leading-relaxed text-gray-400 mb-5">Madurai&apos;s most trusted home appliance repair service. Doorstep convenience, certified experts, genuine parts.</p>

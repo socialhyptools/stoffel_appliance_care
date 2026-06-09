@@ -77,11 +77,11 @@ export default function Header() {
           <div className="flex items-center justify-between h-16">
 
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 min-h-[48px]">
-              <img src="/logo.png" alt="Stoffel Appliance Care" className="w-12 h-12 rounded-xl object-contain" />
+            <Link href="/" className="flex items-center gap-2 min-h-[48px]">
+              <img src="/logo.png" alt="Stoffel Appliance Care" className="w-14 h-14 rounded-xl object-contain" />
               <div className="leading-tight">
                 <div className="text-sm font-extrabold text-gray-900 tracking-tight">Stoffel Appliance Care</div>
-                <div className="text-[10px] font-semibold text-brand-600 uppercase tracking-widest">Madurai, Tamil Nadu</div>
+                <div className="text-[10px] font-semibold text-brand-600 uppercase tracking-widest">Tiruchirappalli, Tamil Nadu</div>
               </div>
             </Link>
 
