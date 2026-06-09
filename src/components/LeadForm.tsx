@@ -7,9 +7,9 @@ import { User, Phone, Wrench, Send } from 'lucide-react';
 // 1. Email Services → Add Gmail → copy Service ID
 // 2. Email Templates → Create template → copy Template ID
 // 3. Account → General → copy Public Key
-const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';
-const EMAILJS_PUBLIC_KEY  = 'YOUR_PUBLIC_KEY';
+const EMAILJS_SERVICE_ID  = 'service_amqm83h';
+const EMAILJS_TEMPLATE_ID = 'template_hujbeqy';
+const EMAILJS_PUBLIC_KEY  = 'J1F0gQIFZGfTe3aBv';
 // ───────────────────────────────────────────────────────────────────────────
 
 const IS_CONFIGURED = !EMAILJS_SERVICE_ID.includes('YOUR_');
