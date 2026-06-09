@@ -101,7 +101,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-gray-600">
-        <p>&copy; {new Date().getFullYear()} Stoffel Appliance Care. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Stoffel Appliance Care. All rights reserved. &nbsp;|&nbsp; Designed and Developed by <a href="https://socialhyp.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors underline">Socialhyp</a></p>
         <div className="flex gap-4">
           <Link href="/privacy-policy" className="hover:text-gray-300 transition-colors">Privacy Policy</Link>
           <span>&middot;</span>
