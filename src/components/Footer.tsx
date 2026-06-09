@@ -81,9 +81,9 @@ export default function Footer() {
                 <p className="flex items-start gap-2">
                   <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                   <span>
-                    Stoffel Appliance Care<br />
+                    <strong className="text-gray-300">Head Office:</strong> Stoffel Appliance Care<br />
                     110/4, Keelavaithiyanatha Puram,<br />
-                    Tiruchirappalli, Tamil Nadu,<br />
+                    Madurai, Tamil Nadu,<br />
                     PIN – 625018, India
                   </span>
                 </p>
