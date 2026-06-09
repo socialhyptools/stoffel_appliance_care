@@ -5,8 +5,8 @@ import AdUnit from '@/components/AdUnit';
 import { AcIcon, WashingMachineIcon, RefrigeratorIcon, TvIcon, MicrowaveIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Service Areas in Madurai | Stoffel Appliance Care',
-  description: 'Stoffel Appliance Care covers 50+ locations in Madurai — Thillai Nagar, KK Nagar, Srirangam, Woraiyur, Anna Nagar & more. Call 8838893560.',
+  title: 'Service Areas in Tiruchirappalli | Stoffel Appliance Care',
+  description: 'Stoffel Appliance Care covers 50+ locations in Tiruchirappalli — Thillai Nagar, KK Nagar, Srirangam, Woraiyur, Anna Nagar & more. Call 8838893560.',
 };
 
 const areas = [
@@ -27,7 +27,7 @@ const schema = {
   '@context': 'https://schema.org', '@type': 'Service',
   name: 'Home Appliance Repair Service Areas',
   provider: { '@type': 'LocalBusiness', name: 'Stoffel Appliance Care', telephone: '+918838893560' },
-  areaServed: areas.map((a) => ({ '@type': 'Place', name: `${a}, Madurai` })),
+  areaServed: areas.map((a) => ({ '@type': 'Place', name: `${a}, Tiruchirappalli` })),
 };
 
 const serviceLinks = [
@@ -51,10 +51,10 @@ export default function ServiceAreasPage() {
               50+ Locations Covered
             </span>
             <h1 className="text-white font-extrabold mb-5" style={{ fontSize: 'clamp(2.2rem,5vw,3.5rem)' }}>
-              Serving All of<br /><span className="text-gradient-blue">Madurai</span>
+              Serving All of<br /><span className="text-gradient-blue">Tiruchirappalli</span>
             </h1>
             <p className="text-blue-200 text-lg leading-relaxed">
-              Fast doorstep appliance repair wherever you are in Madurai. 30-minute response, 50+ areas covered.
+              Fast doorstep appliance repair wherever you are in Tiruchirappalli. 30-minute response, 50+ areas covered.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function ServiceAreasPage() {
         <div className="rounded-2xl overflow-hidden shadow-card mb-12">
           <img
             src="/images/city-map.jpg"
-            alt="Madurai city aerial view - service coverage area"
+            alt="Tiruchirappalli city aerial view - service coverage area"
             className="w-full h-56 object-cover"
             loading="lazy"
             width="1200"
@@ -132,7 +132,7 @@ export default function ServiceAreasPage() {
       <section className="py-16 relative overflow-hidden" style={{ background: 'linear-gradient(135deg,#0c1428 0%,#1e3a8a 100%)' }}>
         <div className="relative max-w-2xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-white text-4xl font-extrabold mb-4">Ready to Book?</h2>
-          <p className="text-blue-200 text-lg mb-8">30-minute response guaranteed across all Madurai locations.</p>
+          <p className="text-blue-200 text-lg mb-8">30-minute response guaranteed across all Tiruchirappalli locations.</p>
           <a href="tel:+918838893560" className="btn-secondary btn btn-lg">
             <Phone className="w-5 h-5" /> Call 88388 93560
           </a>

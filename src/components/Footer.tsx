@@ -38,7 +38,7 @@ export default function Footer() {
                   <div className="text-blue-400 text-[11px] font-medium">Tiruchirappalli, Tamil Nadu</div>
                 </div>
               </div>
-              <p className="text-sm leading-relaxed text-gray-400 mb-5">Madurai&apos;s most trusted home appliance repair service. Doorstep convenience, certified experts, genuine parts.</p>
+              <p className="text-sm leading-relaxed text-gray-400 mb-5">Tiruchirappalli&apos;s most trusted home appliance repair service. Doorstep convenience, certified experts, genuine parts.</p>
               <a href="tel:+918838893560" className="inline-flex items-center gap-2 text-accent-400 font-bold text-base hover:text-accent-300 transition-colors">
                 <Phone className="w-4 h-4" /> 88388 93560
               </a>
@@ -83,7 +83,7 @@ export default function Footer() {
                   <span>
                     Stoffel Appliance Care<br />
                     110/4, Keelavaithiyanatha Puram,<br />
-                    Madurai, Tamil Nadu,<br />
+                    Tiruchirappalli, Tamil Nadu,<br />
                     PIN – 625018, India
                   </span>
                 </p>

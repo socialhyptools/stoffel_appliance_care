@@ -19,7 +19,7 @@ export default function PrivacyPolicyPage() {
           <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Who We Are</h2>
           <p>
             Stoffel Appliance Care ("we", "us", "our") operates the website at yourdomain.com.
-            We provide home appliance repair and service in Madurai, Tamil Nadu, India.
+            We provide home appliance repair and service in Tiruchirappalli, Tamil Nadu, India.
             Contact us at <a href="tel:+918838893560" className="text-brand-600 hover:underline">88388 93560</a>.
           </p>
         </section>

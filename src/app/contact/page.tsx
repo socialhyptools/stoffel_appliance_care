@@ -5,8 +5,8 @@ import LeadForm from '@/components/LeadForm';
 import { WhatsAppIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Stoffel Appliance Care Madurai',
-  description: 'Contact Stoffel Appliance Care for home appliance repair in Madurai. Call 8838893560 or WhatsApp. Same-day service, 30-min response.',
+  title: 'Contact Us | Stoffel Appliance Care Tiruchirappalli',
+  description: 'Contact Stoffel Appliance Care for home appliance repair in Tiruchirappalli. Call 8838893560 or WhatsApp. Same-day service, 30-min response.',
 };
 
 const contactSchema = {
@@ -18,7 +18,7 @@ const contactSchema = {
     '@type': 'LocalBusiness',
     name: 'Stoffel Appliance Care',
     telephone: '+918838893560',
-    address: { '@type': 'PostalAddress', addressLocality: 'Madurai', addressRegion: 'Tamil Nadu', addressCountry: 'IN' },
+    address: { '@type': 'PostalAddress', addressLocality: 'Tiruchirappalli', addressRegion: 'Tamil Nadu', addressCountry: 'IN' },
   },
 };
 
@@ -26,7 +26,7 @@ const contactCards = [
   { Icon: Phone, title: 'Phone', value: '88388 93560', href: 'tel:+918838893560', sub: 'Mon – Sun · 8 AM – 8 PM', color: '#2563eb' },
   { Icon: MessageCircle, title: 'WhatsApp', value: 'Message Us', href: 'https://web.whatsapp.com/send?phone=918778783255&text=', sub: 'Quick response guaranteed', color: '#25d366' },
   { Icon: Mail, title: 'Email', value: 'srvservice174@gmail.com', href: 'mailto:srvservice174@gmail.com', sub: 'We reply within a few hours', color: '#ea4335' },
-  { Icon: MapPin, title: 'Location', value: 'Madurai, TN', href: undefined, sub: 'Doorstep service — we come to you', color: '#d97706' },
+  { Icon: MapPin, title: 'Location', value: 'Tiruchirappalli, TN', href: undefined, sub: 'Doorstep service — we come to you', color: '#d97706' },
   { Icon: Clock, title: 'Working Hours', value: '8 AM – 8 PM', href: undefined, sub: 'Monday to Sunday, all week', color: '#7c3aed' },
 ];
 

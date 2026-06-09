@@ -12,8 +12,8 @@ import LeadForm from '@/components/LeadForm';
 import { AcIcon, WashingMachineIcon, RefrigeratorIcon, TvIcon, MicrowaveIcon, WhatsAppIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'Home Appliance Repair Madurai | Stoffel Appliance Care',
-  description: 'Doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Madurai. 30-min response · 90-day warranty · ₹249 inspection. 30+ expert technicians. Call 8838893560.',
+  title: 'Home Appliance Repair Tiruchirappalli | Stoffel Appliance Care',
+  description: 'Doorstep repair for AC, Washing Machine, Refrigerator, TV & Microwave in Tiruchirappalli. 30-min response · 90-day warranty · ₹249 inspection. 30+ expert technicians. Call 8838893560.',
   alternates: { canonical: 'https://yourdomain.com' },
 };
 
@@ -43,7 +43,7 @@ const features = [
   { icon: <Wrench className="w-6 h-6" />, title: 'Multi-Brand Expertise', desc: 'Samsung, LG, Whirlpool, Voltas, Daikin, Sony, Panasonic & 50+ more.' },
   { icon: <ShieldCheck className="w-6 h-6" />, title: '90–180 Day Warranty', desc: 'All repairs covered. Same issue recurs? We fix it free.' },
   { icon: <Banknote className="w-6 h-6" />, title: 'Transparent Pricing', desc: '₹249 inspection. Full estimate before any work starts.' },
-  { icon: <Zap className="w-6 h-6" />, title: '30-Minute Response', desc: 'Quick dispatch. Same-day service in most Madurai areas.' },
+  { icon: <Zap className="w-6 h-6" />, title: '30-Minute Response', desc: 'Quick dispatch. Same-day service in most Tiruchirappalli areas.' },
   { icon: <Shield className="w-6 h-6" />, title: 'Certified Technicians', desc: 'Background-verified, trained professionals with years of experience.' },
 ];
 
@@ -81,13 +81,13 @@ export default function HomePage() {
             <div className="animate-fade-up">
               <div className="inline-flex items-center gap-2 bg-white/10 border border-white/15 text-blue-200 text-xs font-bold uppercase tracking-widest px-4 py-2 rounded-full mb-6 backdrop-blur-sm">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                Madurai&apos;s Most Trusted Repair Experts
+                Tiruchirappalli&apos;s Most Trusted Repair Experts
               </div>
 
               <h1 className="text-white font-extrabold leading-[1.1] mb-6" style={{ fontSize: 'clamp(2.2rem,5vw,3.5rem)' }}>
                 Fast Doorstep<br />
                 <span className="text-gradient-blue">Home Appliance</span><br />
-                Repair in Madurai
+                Repair in Tiruchirappalli
               </h1>
 
               <p className="text-blue-200 text-lg leading-relaxed mb-8 max-w-lg">
@@ -211,7 +211,7 @@ export default function HomePage() {
                   <CalendarDays className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">Book a Repair Today</h3>
-                <p className="text-blue-200 text-sm leading-relaxed">Same-day service available across all 50+ Madurai locations.</p>
+                <p className="text-blue-200 text-sm leading-relaxed">Same-day service available across all 50+ Tiruchirappalli locations.</p>
               </div>
               <a href="tel:+918838893560"
                 className="mt-6 inline-flex items-center justify-center gap-2 min-h-[48px] px-6 py-3
@@ -264,7 +264,7 @@ export default function HomePage() {
             <div>
               <span className="badge mb-5">Why Choose Us</span>
               <h2 className="text-4xl font-extrabold text-gray-900 mb-5">
-                Why Madurai Trusts<br /><span className="text-gradient">Stoffel Appliance Care</span>
+                Why Tiruchirappalli Trusts<br /><span className="text-gradient">Stoffel Appliance Care</span>
               </h2>
               <p className="text-gray-500 text-lg leading-relaxed mb-8">
                 From a simple AC service to a complex refrigerator repair — we show up fast, diagnose right, fix it the first time, and back it with a warranty.

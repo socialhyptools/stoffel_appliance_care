@@ -6,8 +6,8 @@ import { WhatsAppIcon } from '@/components/Icons';
 import ServicesClient from '@/components/ServicesClient';
 
 export const metadata: Metadata = {
-  title: 'All Appliance Repair Services in Madurai',
-  description: 'Complete home appliance repair in Madurai — AC, Washing Machine, Refrigerator, TV, Microwave. Doorstep service, all brands, 90-day warranty. Call 8838893560.',
+  title: 'All Appliance Repair Services in Tiruchirappalli',
+  description: 'Complete home appliance repair in Tiruchirappalli — AC, Washing Machine, Refrigerator, TV, Microwave. Doorstep service, all brands, 90-day warranty. Call 8838893560.',
 };
 
 const trust = [

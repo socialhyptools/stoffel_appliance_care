@@ -3,9 +3,9 @@ import ServicePageTemplate from '@/components/ServicePageTemplate';
 import { AcIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
-  title: 'AC Repair & Service in Madurai | All Brands',
+  title: 'AC Repair & Service in Tiruchirappalli | All Brands',
   description:
-    'Expert AC repair and service in Madurai — gas refill, deep cleaning, installation, compressor repair. All brands: Voltas, Daikin, LG, Samsung. 90-day warranty. Call 8838893560.',
+    'Expert AC repair and service in Tiruchirappalli — gas refill, deep cleaning, installation, compressor repair. All brands: Voltas, Daikin, LG, Samsung. 90-day warranty. Call 8838893560.',
   alternates: { canonical: 'https://yourdomain.com/services/air-conditioner' },
 };
 
@@ -19,18 +19,18 @@ const schema = {
     name: 'Stoffel Appliance Care',
     telephone: '+918838893560',
   },
-  areaServed: { '@type': 'City', name: 'Madurai' },
+  areaServed: { '@type': 'City', name: 'Tiruchirappalli' },
   description:
-    'AC gas refill, deep cleaning, installation, cooling issues, compressor service for all brands in Madurai.',
+    'AC gas refill, deep cleaning, installation, cooling issues, compressor service for all brands in Tiruchirappalli.',
 };
 
 export default function ACPage() {
   return (
     <ServicePageTemplate
       icon={<AcIcon className="w-14 h-14" />}
-      title="AC Repair & Service in Madurai"
+      title="AC Repair & Service in Tiruchirappalli"
       tagline="Split, window & cassette AC — cooling issues, gas refill, deep cleaning & installation by certified technicians."
-      description="Our AC technicians are trained on all types of air conditioners — split, window, cassette, and portable units. We diagnose and fix cooling failures, refrigerant leaks, compressor faults, PCB failures, water leakage, and unusual noise issues. AC deep cleaning service extends the life of your unit and keeps energy bills low. We also handle new AC installation, uninstallation, and relocation across Madurai."
+      description="Our AC technicians are trained on all types of air conditioners — split, window, cassette, and portable units. We diagnose and fix cooling failures, refrigerant leaks, compressor faults, PCB failures, water leakage, and unusual noise issues. AC deep cleaning service extends the life of your unit and keeps energy bills low. We also handle new AC installation, uninstallation, and relocation across Tiruchirappalli."
       problems={[
         'AC not cooling / poor cooling',
         'Gas refill (refrigerant charging)',
