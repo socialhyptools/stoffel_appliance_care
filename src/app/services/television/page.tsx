@@ -48,6 +48,7 @@ export default function TelevisionPage() {
       adSlot1="1011121314"
       adSlot2="1112131415"
       heroImage="/images/television.jpg"
+      serviceName="TV Repair"
     />
   );
 }

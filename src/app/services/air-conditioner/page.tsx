@@ -50,6 +50,7 @@ export default function ACPage() {
       adSlot1="4455667788"
       adSlot2="5566778899"
       heroImage="/images/ac-repair.jpg"
+      serviceName="AC Repair & Service"
     />
   );
 }

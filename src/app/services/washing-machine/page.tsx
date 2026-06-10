@@ -48,6 +48,7 @@ export default function WashingMachinePage() {
       adSlot1="6677889900"
       adSlot2="7788990011"
       heroImage="/images/washing-machine.jpg"
+      serviceName="Washing Machine Repair"
     />
   );
 }

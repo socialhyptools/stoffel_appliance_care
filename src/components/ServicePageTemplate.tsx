@@ -17,11 +17,12 @@ interface ServiceProps {
   adSlot2: string;
   accentColor?: string;
   heroImage?: string;
+  serviceName?: string;
 }
 
 export default function ServicePageTemplate({
   title, icon, tagline, description, problems, brands,
-  schema, adSlot1, adSlot2, accentColor = '#2563eb', heroImage,
+  schema, adSlot1, adSlot2, accentColor = '#2563eb', heroImage, serviceName = '',
 }: ServiceProps) {
   return (
     <>
@@ -180,6 +181,51 @@ export default function ServicePageTemplate({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 my-8">
         <AdUnit slot={adSlot2} format="auto" />
       </div>
+
+      {/* ── Contact Form Section ── */}
+      <section className="py-16 bg-gray-50 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left info */}
+            <div>
+              <span className="badge mb-4">Book a Service</span>
+              <h2 className="text-3xl font-extrabold text-gray-900 mb-4">
+                Get a Free Callback<br /><span className="text-brand-600">Within 30 Minutes</span>
+              </h2>
+              <p className="text-gray-500 text-base leading-relaxed mb-8">
+                Fill the form and our technician will call you back within 30 minutes. Same-day service available across Tiruchirappalli.
+              </p>
+              <ul className="space-y-3">
+                {[
+                  '✅ ₹249 Inspection Charge',
+                  '✅ 90–180 Day Warranty on All Repairs',
+                  '✅ Certified & Experienced Technicians',
+                  '✅ Doorstep Service — We Come to You',
+                  '✅ Transparent Pricing — No Hidden Costs',
+                ].map((item) => (
+                  <li key={item} className="text-gray-700 text-sm font-medium">{item}</li>
+                ))}
+              </ul>
+              <div className="flex flex-col sm:flex-row gap-4 mt-8">
+                <a href="tel:+918838893560" className="btn-secondary btn btn-lg">
+                  <Phone className="w-5 h-5" /> Call: 88388 93560
+                </a>
+                <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer" className="btn-green btn btn-lg">
+                  <WhatsAppIcon className="w-5 h-5" /> WhatsApp Us
+                </a>
+              </div>
+            </div>
+            {/* Right form */}
+            <div className="card shadow-form">
+              <div className="mb-6">
+                <h3 className="text-xl font-extrabold text-gray-900 mb-1">Book This Service</h3>
+                <p className="text-gray-500 text-sm">We call back within 30 minutes · 100% free</p>
+              </div>
+              <LeadForm defaultService={serviceName} />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <FAQ />
     </>

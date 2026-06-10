@@ -48,6 +48,7 @@ export default function RefrigeratorPage() {
       adSlot1="8899001122"
       adSlot2="9900112233"
       heroImage="/images/refrigerator.jpg"
+      serviceName="Refrigerator Repair"
     />
   );
 }

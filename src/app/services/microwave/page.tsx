@@ -48,6 +48,7 @@ export default function MicrowavePage() {
       adSlot1="1516171819"
       adSlot2="1617181920"
       heroImage="/images/microwave.jpg"
+      serviceName="Microwave Repair"
     />
   );
 }
