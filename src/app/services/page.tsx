@@ -69,7 +69,7 @@ export default function ServicesPage() {
             <a href="tel:+918778783255" className="btn-secondary btn btn-lg">
               <Phone className="w-5 h-5" /> 93448 09038
             </a>
-            <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn btn-lg">
+            <a href="https://wa.me/918778783255" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn btn-lg">
               <WhatsAppIcon className="w-5 h-5" /> WhatsApp
             </a>
           </div>

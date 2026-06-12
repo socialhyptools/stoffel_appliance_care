@@ -48,7 +48,7 @@ export default function ServicePageTemplate({
                 <a href="tel:+918778783255" className="btn-secondary btn btn-lg">
                   <Phone className="w-5 h-5" /> Book: 93448 09038
                 </a>
-                <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn btn-lg">
+                <a href="https://wa.me/918778783255" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn btn-lg">
                   <WhatsAppIcon className="w-5 h-5" /> WhatsApp
                 </a>
               </div>
@@ -169,7 +169,7 @@ export default function ServicePageTemplate({
               <a href="tel:+918778783255" className="btn-secondary btn w-full justify-center text-sm">
                 <Phone className="w-4 h-4" /> 93448 09038
               </a>
-              <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer"
+              <a href="https://wa.me/918778783255" target="_blank" rel="noopener noreferrer"
                 className="btn-green btn w-full justify-center text-sm mt-3">
                 <WhatsAppIcon className="w-4 h-4" /> WhatsApp Us
               </a>
@@ -210,7 +210,7 @@ export default function ServicePageTemplate({
                 <a href="tel:+918838893560" className="btn-secondary btn btn-lg">
                   <Phone className="w-5 h-5" /> Call: 88388 93560
                 </a>
-                <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer" className="btn-green btn btn-lg">
+                <a href="https://wa.me/918778783255" target="_blank" rel="noopener noreferrer" className="btn-green btn btn-lg">
                   <WhatsAppIcon className="w-5 h-5" /> WhatsApp Us
                 </a>
               </div>

@@ -122,7 +122,7 @@ export default function PrivacyPolicyPage() {
               88388 93560
             </a>{' '}
             or WhatsApp{' '}
-            <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
+            <a href="https://wa.me/918778783255" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
               here
             </a>.
           </p>
