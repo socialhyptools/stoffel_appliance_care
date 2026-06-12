@@ -66,10 +66,10 @@ export default function ServicesPage() {
           <h2 className="text-white text-4xl font-extrabold mb-4">Ready to Book a Repair?</h2>
           <p className="text-blue-200 text-lg mb-8">Call or WhatsApp — we respond within 30 minutes.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+919344809038" className="btn-secondary btn btn-lg">
+            <a href="tel:+918778783255" className="btn-secondary btn btn-lg">
               <Phone className="w-5 h-5" /> 93448 09038
             </a>
-            <a href="https://wa.me/919344809038" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn btn-lg">
+            <a href="https://web.whatsapp.com/send?phone=918778783255&text=" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn btn-lg">
               <WhatsAppIcon className="w-5 h-5" /> WhatsApp
             </a>
           </div>

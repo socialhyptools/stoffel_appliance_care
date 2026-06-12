@@ -44,7 +44,7 @@ export default function FAQ() {
         </div>
         <div className="text-center mt-10">
           <p className="text-gray-500 mb-4">Still have questions?</p>
-          <a href="tel:+919344809038" className="btn-primary btn">
+          <a href="tel:+918778783255" className="btn-primary btn">
             <Phone className="w-4 h-4" /> Call us — 93448 09038
           </a>
         </div>
