@@ -2,9 +2,16 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
+const serviceLinks = [
+  { href: '/services/air-conditioner', label: 'AC Repair & Service' },
+  { href: '/services/washing-machine', label: 'Washing Machine Repair' },
+  { href: '/services/refrigerator', label: 'Refrigerator Repair' },
+  { href: '/services/television', label: 'TV Repair' },
+  { href: '/services/microwave', label: 'Microwave Repair' },
+];
+
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/services', label: 'Services' },
   { href: '/service-areas', label: 'Service Areas' },
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact' },
@@ -87,6 +94,39 @@ export default function Header() {
 
             {/* Desktop nav */}
             <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
+              <Link href="/" className="min-h-[48px] px-4 flex items-center text-sm font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-all duration-150">
+                Home
+              </Link>
+
+              {/* Services dropdown */}
+              <div className="relative group">
+                <Link href="/services"
+                  className="min-h-[48px] px-4 flex items-center gap-1 text-sm font-medium text-gray-600
+                             hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-all duration-150">
+                  Services
+                  <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </Link>
+                {/* Dropdown panel */}
+                <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-2xl shadow-card-hover border border-gray-100 py-2 z-50
+                                opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                                transition-all duration-200 translate-y-1 group-hover:translate-y-0">
+                  {serviceLinks.map((s) => (
+                    <Link key={s.href} href={s.href}
+                      className="flex items-center gap-2.5 px-4 py-2.5 text-sm text-gray-600 hover:text-brand-600 hover:bg-brand-50 transition-colors">
+                      <span className="w-1.5 h-1.5 rounded-full bg-brand-400 flex-shrink-0" />
+                      {s.label}
+                    </Link>
+                  ))}
+                  <div className="border-t border-gray-100 mt-2 pt-2 px-4 pb-1">
+                    <Link href="/services" className="text-xs text-brand-600 font-semibold hover:underline">
+                      View All Services →
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href}
                   className="min-h-[48px] px-4 flex items-center text-sm font-medium text-gray-600
@@ -125,6 +165,21 @@ export default function Header() {
         {open && (
           <div className="md:hidden bg-white border-t border-gray-100 shadow-card-hover">
             <nav className="flex flex-col px-4 py-3 gap-1" aria-label="Mobile navigation">
+              <Link href="/" onClick={() => setOpen(false)}
+                className="min-h-[48px] px-4 flex items-center text-base font-medium text-gray-700 hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-colors">
+                Home
+              </Link>
+              {/* Services group */}
+              <div className="px-4 pt-2 pb-1">
+                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Services</p>
+              </div>
+              {serviceLinks.map((s) => (
+                <Link key={s.href} href={s.href} onClick={() => setOpen(false)}
+                  className="min-h-[44px] px-6 flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-brand-600 hover:bg-brand-50 rounded-xl transition-colors">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-400 flex-shrink-0" />
+                  {s.label}
+                </Link>
+              ))}
               {navLinks.map((link) => (
                 <Link key={link.href} href={link.href} onClick={() => setOpen(false)}
                   className="min-h-[48px] px-4 flex items-center text-base font-medium text-gray-700

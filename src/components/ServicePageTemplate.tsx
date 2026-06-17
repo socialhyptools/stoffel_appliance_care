@@ -46,7 +46,7 @@ export default function ServicePageTemplate({
               <p className="text-blue-200 text-lg leading-relaxed mb-8 max-w-lg">{tagline}</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="tel:+918778783255" className="btn-secondary btn btn-lg">
-                  <Phone className="w-5 h-5" /> Book: 93448 09038
+                  <Phone className="w-5 h-5" /> Book: 88388 93560
                 </a>
                 <a href="https://wa.me/918778783255" target="_blank" rel="noopener noreferrer" className="btn-outline-white btn btn-lg">
                   <WhatsAppIcon className="w-5 h-5" /> WhatsApp
@@ -167,7 +167,7 @@ export default function ServicePageTemplate({
                 ))}
               </ul>
               <a href="tel:+918778783255" className="btn-secondary btn w-full justify-center text-sm">
-                <Phone className="w-4 h-4" /> 93448 09038
+                <Phone className="w-4 h-4" /> 88388 93560
               </a>
               <a href="https://wa.me/918778783255" target="_blank" rel="noopener noreferrer"
                 className="btn-green btn w-full justify-center text-sm mt-3">
