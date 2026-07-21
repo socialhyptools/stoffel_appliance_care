@@ -29,7 +29,7 @@ export default function ACPage() {
     <ServicePageTemplate
       icon={<AcIcon className="w-14 h-14" />}
       title="AC Repair & Service in Tiruchirappalli"
-      tagline="Split, window & cassette AC — cooling issues, gas refill, deep cleaning & installation by certified technicians."
+      tagline="Split, window & cassette AC — cooling issues, gas refill, deep cleaning & installation by experienced technicians."
       description="Our AC technicians are trained on all types of air conditioners — split, window, cassette, and portable units. We diagnose and fix cooling failures, refrigerant leaks, compressor faults, PCB failures, water leakage, and unusual noise issues. AC deep cleaning service extends the life of your unit and keeps energy bills low. We also handle new AC installation, uninstallation, and relocation across Tiruchirappalli."
       problems={[
         'AC not cooling / poor cooling',

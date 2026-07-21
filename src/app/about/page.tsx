@@ -6,7 +6,7 @@ import AdUnit from '@/components/AdUnit';
 export const metadata: Metadata = {
   title: 'About Us | Stoffel Appliance Care Tiruchirappalli',
   description:
-    "Stoffel Appliance Care — Tiruchirappalli's trusted home appliance repair service. 30+ certified technicians, multi-brand expertise, doorstep service across 50+ locations.",
+    "Stoffel Appliance Care — Tiruchirappalli's trusted home appliance repair service. 30+ experienced technicians, multi-brand expertise, doorstep service across 50+ locations.",
 };
 
 const values = [
@@ -38,7 +38,7 @@ export default function AboutPage() {
               About <span className="text-gradient-blue">Stoffel Appliance Care</span>
             </h1>
             <p className="text-blue-200 text-lg leading-relaxed">
-              Tiruchirappalli&apos;s most trusted home appliance repair service — certified technicians, genuine parts, doorstep convenience.
+              Tiruchirappalli&apos;s most trusted home appliance repair service — experienced technicians, genuine parts, doorstep convenience.
             </p>
           </div>
         </div>
@@ -64,7 +64,7 @@ export default function AboutPage() {
               Stoffel Appliance Care is a professional home appliance repair company based in Tiruchirappalli, Tamil Nadu. We provide fast, reliable, and affordable <strong>doorstep repair services</strong> for AC, washing machines, refrigerators, televisions, and microwave ovens.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Our team of 30+ certified technicians covers 50+ areas in Tiruchirappalli. We believe in transparent pricing — you&apos;ll always know the full cost before we begin. Every repair we carry out is backed by a 90–180 day warranty.
+              Our team of 30+ experienced technicians covers 50+ areas in Tiruchirappalli. We believe in transparent pricing — you&apos;ll always know the full cost before we begin. Every repair we carry out is backed by a 90–180 day warranty.
             </p>
             <Link href="/contact" className="btn-secondary btn btn-lg">Get in Touch →</Link>
           </div>

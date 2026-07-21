@@ -34,7 +34,7 @@ const stats = [
 
 const steps = [
   { n: '1', title: 'Call or Book Online', desc: 'Call us or submit the form. A booking agent confirms in minutes.', icon: <PhoneCall className="w-10 h-10" /> },
-  { n: '2', title: 'Expert Arrives', desc: 'A certified technician arrives at your door within 30 minutes.', icon: <Car className="w-10 h-10" /> },
+  { n: '2', title: 'Expert Arrives', desc: 'A experienced technician arrives at your door within 30 minutes.', icon: <Car className="w-10 h-10" /> },
   { n: '3', title: 'Fixed + Warranty', desc: 'Appliance repaired with genuine parts. 90-day warranty included.', icon: <CheckCircle2 className="w-10 h-10" /> },
 ];
 
@@ -44,7 +44,7 @@ const features = [
   { icon: <ShieldCheck className="w-6 h-6" />, title: '90–180 Day Warranty', desc: 'All repairs covered. Same issue recurs? We fix it free.' },
   { icon: <Banknote className="w-6 h-6" />, title: 'Transparent Pricing', desc: '₹249 inspection. Full estimate before any work starts.' },
   { icon: <Zap className="w-6 h-6" />, title: '30-Minute Response', desc: 'Quick dispatch. Same-day service in most Tiruchirappalli areas.' },
-  { icon: <Shield className="w-6 h-6" />, title: 'Certified Technicians', desc: 'Background-verified, trained professionals with years of experience.' },
+  { icon: <Shield className="w-6 h-6" />, title: 'experienced technicians', desc: 'Background-verified, trained professionals with years of experience.' },
 ];
 
 const heroBadges = [
@@ -91,7 +91,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-blue-200 text-lg leading-relaxed mb-8 max-w-lg">
-                AC · Washing Machine · Refrigerator · TV · Microwave — certified technicians at your home within 30 minutes.
+                AC · Washing Machine · Refrigerator · TV · Microwave — experienced technicians at your home within 30 minutes.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-10">
@@ -329,7 +329,7 @@ export default function HomePage() {
             <span className="text-gradient-blue">We&apos;ll Fix It Today.</span>
           </h2>
           <p className="text-blue-200 text-lg mb-8 max-w-lg mx-auto">
-            Call now or WhatsApp. A certified technician reaches your door in 30 minutes, flat.
+            Call now or WhatsApp. A experienced technician reaches your door in 30 minutes, flat.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:+918838893560" className="btn-secondary btn btn-lg">

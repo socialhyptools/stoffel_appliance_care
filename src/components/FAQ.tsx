@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Phone } from 'lucide-react';
 
 const faqs = [
-  { q: 'How quickly can you send a technician?', a: 'We aim for a 30-minute response time. In most areas of Trichy, a certified technician will arrive within 30–60 minutes of your call.' },
+  { q: 'How quickly can you send a technician?', a: 'We aim for a 30-minute response time. In most areas of Trichy, a experienced technician will arrive within 30–60 minutes of your call.' },
   { q: 'What is the inspection charge?', a: 'The inspection charge is ₹399. After diagnosis, we give you a full cost breakdown before starting any repair. No hidden charges — ever.' },
   { q: 'Do you service all appliance brands?', a: 'Yes. We repair all major brands including Samsung, LG, Whirlpool, Voltas, Daikin, Sony, Panasonic, Godrej, IFB, Haier, and 50+ others.' },
   { q: 'What warranty do you provide?', a: 'We provide 90 to 180 days warranty on all services. If the same issue recurs within the warranty period, we fix it at no extra charge.' },
