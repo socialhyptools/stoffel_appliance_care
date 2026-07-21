@@ -11,7 +11,6 @@ const serviceLinks = [
 ];
 
 const navLinks = [
-  { href: '/', label: 'Home' },
   { href: '/service-areas', label: 'Service Areas' },
   { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact' },
