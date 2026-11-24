@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://yourdomain.com';
+export const dynamic = 'force-static';
+
+const BASE_URL = 'https://stoffelappliancecare.in';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
